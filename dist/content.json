@@ -247,8 +247,41 @@
   "prototypes": [],
   "studioWork": [
     {
+      "studio": "Yellow Brick Games",
+      "label": "Latest role",
+      "project": "Unannounced project",
+      "role": "Technical Designer",
+      "summary": "Worked with the Gameplay Ability System (GAS) in Unreal Engine 5."
+    },
+    {
       "studio": "Escape Velocity Entertainment",
       "summary": "Designed gameplay abilities, wrote their technical specifications and implemented them in Unreal Engine 5."
+    }
+  ],
+  "studios": [
+    {
+      "name": "Yellow Brick Games",
+      "logo": "assets/studios/yellow-brick.webp"
+    },
+    {
+      "name": "Escape Velocity Entertainment",
+      "logo": "assets/studios/escape-velocity.webp"
+    },
+    {
+      "name": "Novarama",
+      "logo": "assets/studios/novarama.webp"
+    },
+    {
+      "name": "Electronic Arts",
+      "logo": "assets/studios/ea.svg"
+    },
+    {
+      "name": "Ubisoft",
+      "logo": "assets/studios/ubisoft.webp"
+    },
+    {
+      "name": "Wake Studios",
+      "logo": "assets/studios/wake.webp"
     }
   ]
 }

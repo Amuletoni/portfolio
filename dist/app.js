@@ -38,17 +38,26 @@ function home() {
   const coursework = content.projects.filter(project => project.context === 'academic');
   main.innerHTML = `<div class="wrap">
     <section id="about" aria-label="Profile" class="profile">
-      <div><p class="section-kicker">Profile</p><h1>${esc(p.name)}</h1>
-        <p class="job-title">${esc(p.title)}</p>
-        <p class="experience">${esc(p.experience)} years in games</p></div>
-      <div class="bio"><p>${esc(p.intro)} ${esc(p.bio)}</p>
+      <div class="profile-cover">
+        <img class="cover-art" src="assets/velvet-shell.webp" alt="" fetchpriority="high">
+        <div class="cover-type"><p class="section-kicker">Profile <span>/</span> ${esc(p.experience)} years in games</p>
+          <h1>${p.title.trim().split(/\s+/).map(word => `<span>${esc(word)}</span>`).join(' ')}</h1></div>
+        <a class="cover-caption" href="#project/rainbow-six-siege"><span>Rainbow Six Siege</span>Operation Velvet Shell ${arrow}</a>
+      </div>
+      <div class="profile-summary"><p>${esc(p.intro)} ${esc(p.bio)}</p>
         <div id="contact" class="contact-links">${link('mailto:' + p.email, p.email)}
         <a href="${safeUrl(p.linkedin)}">LinkedIn ${arrow}</a></div></div>
+      <ul class="studio-logos" aria-label="Studios I’ve worked at">
+        ${(content.studios || []).map(s => `<li><img src="${safeUrl(s.logo)}" alt="${esc(s.name)}"></li>`).join('')}
+      </ul>
     </section>
     <section id="work" class="home-section"><h2>Games &amp; Studios</h2>
+      <div class="studio-credits">${(content.studioWork || []).map(job => `<article class="studio-note">
+        ${job.label ? `<p class="meta">${esc(job.label)}</p>` : ''}
+        <h3>${esc(job.studio)}</h3>
+        ${job.role ? `<p class="role">${esc(job.role)} · ${esc(job.project)}</p>` : ''}
+        <p>${esc(job.summary)}</p></article>`).join('')}</div>
       <ul class="games">${games.map(gameRow).join('')}</ul>
-      ${(content.studioWork || []).map(job => `<div class="studio-note"><strong>${esc(job.studio)}</strong>
-        <p>${esc(job.summary)}</p></div>`).join('')}
     </section>
     <section id="lab" class="home-section"><h2>The Workshop</h2>
       <div class="workshop-list">${Object.entries(categories).map(([id, label]) => workshopLink(id, label)).join('')}</div>
