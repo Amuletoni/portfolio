@@ -1,160 +1,26 @@
 const main = document.querySelector('main');
-const categories = {'level-design': 'Level design', 'game-design': 'Game design'};
 let content;
-
-const esc = value => String(value ?? '').replace(/[&<>"']/g, char => (
-  {'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[char]
-));
-function safeUrl(value) {
-  try {
-    const url = new URL(value, location.href);
-    return ['https:', 'http:'].includes(url.protocol) ? esc(value) : '';
-  } catch { return ''; }
-}
+const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const safeUrl = value => { try { const u = new URL(value, location.href); return ['http:', 'https:'].includes(u.protocol) ? esc(value) : ''; } catch { return ''; } };
+const image = (src, alt, eager = false) => `<img src="${safeUrl(src)}" alt="${esc(alt)}" loading="${eager ? 'eager' : 'lazy'}" decoding="async">`;
 const arrow = '<span aria-hidden="true">↗</span>';
-const image = (src, alt, eager = false) =>
-  `<img src="${safeUrl(src)}" alt="${esc(alt)}" loading="${eager ? 'eager' : 'lazy'}" decoding="async">`;
-const link = (href, title) => `<a href="${esc(href)}">${esc(title)}</a>`;
-
-function gameRow(game) {
-  return `<li><a class="game-row" href="#project/${esc(game.id)}">
-    ${game.image ? image(game.image, '') : ''}
-    <div class="credit"><span class="meta">${esc(game.studio)}</span>
-      <h3>${esc(game.title)}</h3><span class="role">${esc(game.role)}</span></div>
-    <p>${esc(game.summary)}</p><span class="row-arrow" aria-hidden="true">→</span>
-  </a></li>`;
+const textLink = (href, text) => `<a class="text-link" href="${esc(href)}">${esc(text)}${arrow}</a>`;
+const diagram = kind => kind === 'level-design' ? `<svg viewBox="0 0 440 210" fill="none" aria-hidden="true"><g stroke="#909d81" stroke-width="1.5"><path d="M50 140 190 195 385 110 245 55Z"/><path d="M50 140v-45l140 55v45M190 150l195-85v45M50 95l195-85 140 55M245 10v45"/><path d="m105 117 55-24 57 22-55 24m55-24V77l55-24 57 22v38M160 93V55l57 22M160 55l55-24 57 22"/></g><path d="m75 143 68 27 74-32 2-24 72-31 66 25" stroke="#e87548" stroke-width="2" stroke-dasharray="5 5"/><circle cx="75" cy="143" r="5" fill="#e87548"/><path d="m348 99 10 9-13 2" stroke="#e87548" stroke-width="2"/><text x="38" y="195" font-size="9" fill="#909d81" font-family="monospace">01 / SPACE → FLOW → ENCOUNTER</text></svg>` : `<svg viewBox="0 0 440 210" fill="none" aria-hidden="true"><g stroke="#909d81" stroke-width="1.5"><rect x="26" y="67" width="85" height="55"/><path d="M111 94h57m104 0h57M220 40v-19h151v73h-17M220 148v29H69v-55"/><path d="m220 40 52 54-52 54-52-54Z"/><circle cx="351" cy="94" r="30"/></g><path d="m152 88 9 6-9 6m167-12 9 6-9 6m-105 56 6 7 6-7" stroke="#e87548" stroke-width="2"/><circle cx="220" cy="94" r="6" fill="#e87548"/><text x="43" y="99" fill="#b4bda9" font-size="10" font-family="monospace">INPUT</text><text x="339" y="98" fill="#b4bda9" font-size="10" font-family="monospace">ACT</text><text x="38" y="205" font-size="9" fill="#909d81" font-family="monospace">02 / RULES → RESPONSE → ITERATION</text></svg>`;
+function contact() {return `<section class="contact" id="contact"><div class="section-label"><span>04 /</span> Get in touch</div><div><h2>Good games start<br>with a conversation.</h2><div class="contact-links">${textLink(`mailto:${content.profile.email}`,content.profile.email)}<a class="text-link" href="${safeUrl(content.profile.linkedin)}" target="_blank" rel="noopener noreferrer">LinkedIn ${arrow}</a></div></div></section>`;}
+function home(){
+ const p=content.profile;
+ main.innerHTML=`<div class="wrap"><section class="hero" aria-labelledby="hero-title"><div><p class="eyebrow"><span class="orange-dot"></span> Toni Guillem / ${esc(p.experience)} years in games</p><h1 id="hero-title"><span>TECHNICAL</span><span>GAME</span><span class="outline-word">DESIGNER.</span></h1><p class="hero-copy">${esc(p.intro)}</p>${textLink('#work','Explore selected work')}</div><figure class="hero-art"><a class="hero-image" href="#project/rainbow-six-siege" style="display:block" aria-label="Explore my work on Rainbow Six Siege">${image('assets/siege.webp','Rainbow Six Siege operators assembled in a sunlit hall',true)}<span class="image-tag">FROM THE FIELD / 01</span><span class="hero-image-title"><span><small>UBISOFT / GAMEPLAY & SYSTEMS</small>Rainbow Six Siege</span><span class="circle-arrow" aria-hidden="true">↗</span></span></a><figcaption><span>DESIGN IS IN THE DETAILS.</span><span>SCROLL TO EXPLORE ↓</span></figcaption><span class="margin-note" aria-hidden="true">SELECTED WORK & EXPERIMENTS — VOL. 01</span></figure><div class="hero-bottom"><p>A FEW PLACES I’VE BUILT GAMES</p><div class="studio-names"><span>UBISOFT</span><span>EA SPORTS</span><span>novarama</span><span>ESCAPE VELOCITY</span></div></div></section>
+ <section class="selected" id="work"><div class="section-top"><div class="section-label"><span>01 /</span> Selected work</div><h2 class="section-title">The games.<br><em>The decisions.</em></h2><p>A selection of the systems, mechanics, and spaces I’ve helped bring to life.</p></div>${content.projects.slice(0,3).map((p,i)=>`<article class="project-feature"><div class="project-info"><span class="index">[ 0${i+1} ]</span><div class="project-meta">${esc(p.studio)} / ${esc(p.role.split(' · ')[0])}</div><h3>${esc(p.title)}</h3><p>${esc(p.summary)}</p>${textLink('#project/'+p.id,'Inside the project')}</div><a class="project-visual" href="#project/${esc(p.id)}" aria-label="Explore ${esc(p.title)}">${image(p.image,p.imageAlt)}<span class="visual-label">${esc(p.label)}</span></a></article>`).join('')}<p class="archive-title">ALSO PART OF THE STORY</p>${content.projects.slice(3).map((p,i)=>`<a class="archive-row" href="#project/${esc(p.id)}"><span>0${i+4}</span><h3>${esc(p.title)}</h3><p>${esc(p.studio)} / ${esc(p.label.split(' / ')[0])}</p>${arrow}</a>`).join('')}</section></div>
+ <section class="workshop" id="lab"><div class="section-top"><div class="section-label"><span>02 /</span> Work in progress, by design</div><div><h2 class="section-title">The workshop<span style="color:#e87548">.</span></h2><p class="workshop-intro">A place for smaller ideas. Playable experiments, design breakdowns, and things worth testing.</p></div></div><div class="lab-grid">${labEntry('level-design','Level design','Spaces to explore. Routes to discover. Encounters to get right.','01')}${labEntry('game-design','Game design','Mechanics to test. Systems to pull apart. Ideas to put in your hands.','02')}</div><p class="lab-foot">${content.prototypes.some(p=>p.published)?'OPEN AN EXPERIMENT TO EXPLORE THE WORK.':'THE WORKSHOP IS OPEN. FIRST EXPERIMENTS TO FOLLOW.'}</p></section>
+ <div class="wrap"><section class="about" id="about"><div class="section-label"><span>03 /</span> Behind the work</div><div class="about-main"><h2>A designer with<br>a programmer’s instincts.</h2><p>${esc(p.bio)}</p><p>My background in programming shapes how I design: I think about how a feature will be built while exploring what it could become. I’m at home working directly in the engine and alongside the people who bring a game together.</p><div class="experience-row"><div class="big-number">${esc(p.experience)}<small>YEARS MAKING GAMES</small></div><ul class="expertise"><li>Unreal Engine 5</li><li>Gameplay abilities</li><li>Rapid prototyping</li><li>Combat systems</li><li>Rational Game Design</li><li>Level design</li></ul></div><div class="experience-list"><div class="experience-item"><strong>Escape Velocity Entertainment</strong><span>Gameplay ability design & UE5 implementation</span></div><div class="experience-item"><strong>Novarama</strong><span>Principal Game Designer</span></div><div class="experience-item"><strong>EA SPORTS</strong><span>Game Designer</span></div><div class="experience-item"><strong>Ubisoft</strong><span>Game, quest & level design</span></div><div class="experience-item"><strong>Wake Studios</strong><span>Main Game Programmer</span></div></div></div></section></div>${contact()}`;
 }
-
-function workshopLink(id, label) {
-  const count = content.prototypes.filter(p => p.category === id && p.published).length;
-  return `<a class="workshop-link" href="#lab/${id}"><strong>${label}</strong>
-    <span>${count ? count + (count === 1 ? ' experiment' : ' experiments') : 'No entries yet'}</span>
-    <span aria-hidden="true">→</span></a>`;
-}
-
-function home() {
-  const p = content.profile;
-  main.innerHTML = `<div class="wrap">
-    <section id="about" aria-label="Profile" class="profile">
-      <div class="profile-cover">
-        <img class="cover-art" src="assets/velvet-shell.webp" alt="" fetchpriority="high">
-        <div class="cover-type"><p class="section-kicker">Portfolio <span>/</span> ${esc(p.experience)} years in games</p>
-          <h1>${p.title.trim().split(/\s+/).map(word => `<span>${esc(word)}</span>`).join(' ')}</h1></div>
-        <a class="cover-caption" href="#project/rainbow-six-siege"><span>Rainbow Six Siege</span>Operation Velvet Shell ${arrow}</a>
-      </div>
-      <div class="profile-summary"><p>${esc(p.intro)} ${esc(p.bio)}</p>
-        <div id="contact" class="contact-links">${link('mailto:' + p.email, p.email)}
-        <a href="${safeUrl(p.linkedin)}">LinkedIn ${arrow}</a></div></div>
-      <ul class="studio-logos" aria-label="Studios I’ve worked at">
-        ${(content.studios || []).map(s => `<li><img src="${safeUrl(s.logo)}" alt="${esc(s.name)}"></li>`).join('')}
-      </ul>
-    </section>
-    <section id="work" class="home-section"><h2>Games &amp; Studios</h2>
-      <div class="studio-credits">${(content.studioWork || []).map(job => `<article class="studio-note">
-        ${job.label ? `<p class="meta">${esc(job.label)}</p>` : ''}
-        <h3>${esc(job.studio)}</h3>
-        ${job.role ? `<p class="role">${esc(job.role)} · ${esc(job.project)}</p>` : ''}
-        <p>${esc(job.summary)}</p></article>`).join('')}</div>
-      <ul class="games">${content.projects.map(gameRow).join('')}</ul>
-    </section>
-    <section id="lab" class="home-section"><h2>The Workshop</h2>
-      <p class="workshop-intro">My spare-time projects in level design and game design.</p>
-      <div class="workshop-list">${Object.entries(categories).map(([id, label]) => workshopLink(id, label)).join('')}</div>
-    </section>
-  </div>`;
-}
-
-function lab(kind) {
-  const title = categories[kind] || 'All experiments';
-  const entries = content.prototypes.filter(p => p.published && (kind === 'all' || p.category === kind));
-  document.title = `${title} — The Workshop — Toni Guillem`;
-  main.innerHTML = `<div class="wrap inner-page">${link('#lab', '← The Workshop')}
-    <h1>${title}</h1>
-    <nav class="lab-nav" aria-label="Workshop categories">
-      ${Object.entries({all:'All experiments', ...categories}).map(([id, label]) =>
-        `<a href="#lab/${id}" ${id === kind ? 'aria-current="page"' : ''}>${label}</a>`).join('')}
-    </nav>
-    ${entries.length ? entries.map(p => `<article class="academic"><h2>${link('#prototype/' + p.id, p.title)}</h2>
-      ${p.image ? image(p.image, p.imageAlt || p.title) : ''}<p>${esc(p.summary)}</p></article>`).join('')
-      : '<p>No experiments published here yet.</p>'}
-  </div>`;
-}
+function labEntry(kind,title,copy,number){const count=content.prototypes.filter(p=>p.published&&p.category===kind).length;return `<a class="lab-entry" href="#lab/${kind}"><div class="micro"><span>EXPERIMENTS / ${number}</span><span>${count?String(count).padStart(2,'0')+' ENTRIES':'FIRST ENTRIES COMING SOON'}</span></div><div class="lab-illustration">${diagram(kind)}</div><h3>${title}${arrow}</h3><p>${copy}</p></a>`;}
+function lab(kind){const level=kind==='level-design'; const all=kind==='all'; const entries=content.prototypes.filter(p=>p.published&&(all||p.category===kind));const title=all?'The workshop.':level?'Level design.':'Game design.'; document.title=`${title} — Toni Guillem`;main.innerHTML=`<div class="wrap"><section class="lab-page"><a class="back" href="#lab">← BACK TO THE PORTFOLIO</a><p class="eyebrow"><span class="orange-dot"></span> THE WORKSHOP / EXPERIMENTS & PROTOTYPES</p><h1>${title}</h1><p class="lead">${all?'Playable ideas, videos, and notes from the design process.':level?'Exploring how spaces guide players, create choices, and shape encounters.':'Taking a mechanic from an idea to something you can play, test, and pull apart.'}</p><nav class="lab-nav" aria-label="Workshop categories">${[['all','All experiments'],['level-design','Level design'],['game-design','Game design']].map(([id,text])=>`<a href="#lab/${id}" ${id===kind?'aria-current="page"':''}>${text}</a>`).join('')}</nav>${entries.length?`<div class="prototype-grid">${entries.map(p=>`<a class="prototype-card" href="#prototype/${esc(p.id)}">${p.image?image(p.image,p.imageAlt||p.title):`<div class="lab-illustration">${diagram(p.category)}</div>`}<p class="micro">${esc(p.category.replace('-',' '))} / ${esc(p.format||'Design experiment')}</p><h2>${esc(p.title)} ↗</h2><p>${esc(p.summary)}</p></a>`).join('')}</div>`:`<div class="empty-workshop"><div class="lab-illustration">${diagram(level?'level-design':'game-design')}</div><div><p class="micro">FIRST ENTRY / COMING SOON</p><h2>Room for the next idea.</h2><p>No experiments published here yet. Future entries will include playable builds, videos, and notes on the decisions behind them.</p><p>For now, take a look at ${level?'my level and quest design for Assassin’s Creed Chronicles.':'my gameplay and systems work on Rainbow Six Siege.'}</p>${textLink('#project/'+(level?'assassins-creed-chronicles':'rainbow-six-siege'),'Explore related work')}</div></div>`}</section></div>${contact()}`;}
 function media(p){let html=''; if(p.video){const u=safeUrl(p.video); if(u) html+=`<section class="media-block"><h2>Watch the prototype</h2><video controls preload="metadata" ${p.image?`poster="${safeUrl(p.image)}"`:''}><source src="${u}">Your browser does not support this video.</video></section>`;}if(p.videoUrl){const u=safeUrl(p.videoUrl);if(u) html+=`<div class="media-actions"><a class="text-link" href="${u}" target="_blank" rel="noopener noreferrer">Watch the video ${arrow}</a></div>`;}if(p.playableUrl){const u=safeUrl(p.playableUrl);if(u)html+=`<section class="media-block"><h2>Play the prototype</h2><div class="play-frame" data-player-url="${u}"><p>${esc(p.controls||'Open the build to see its controls and requirements.')}</p>${p.embed?'<button type="button" data-launch>Launch interactive build ↗</button>':''}<div class="media-actions" style="justify-content:center"><a class="text-link" style="color:inherit;border-color:currentColor" href="${u}" target="_blank" rel="noopener noreferrer">Open in a new tab ${arrow}</a></div></div></section>`;}if(p.download){html+=`<div class="media-actions"><a class="text-link" href="${safeUrl(p.download)}" download>Download build ↓</a></div>`;}return html;}
-
-function detail(p, prototype) {
-  document.title = `${p.title} — Toni Guillem`;
-  const back = prototype ? '#lab/' + p.category : '#work';
-  const backLink = link(back, prototype ? '← The Workshop' : '← Games & Studios');
-  main.innerHTML = `<article class="wrap inner-page">
-    ${backLink}
-    <header class="detail-head"><div><p class="meta">${esc(p.studio || categories[p.category])}</p>
-      <h1>${esc(p.title)}</h1><p class="job-title">${esc(p.role || '')}</p>
-      <p>${esc(p.intro || p.summary)}</p></div>
-      ${p.image ? image(p.image, p.imageAlt || p.title, true) : ''}</header>
-    ${p.facts?.length ? `<dl class="facts">${p.facts.map(([k,v]) =>
-      `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl>` : ''}
-    <div class="case-body">${media(p)}
-      ${(p.sections || []).map(s => `<section><h2>${esc(s.title)}</h2><p>${esc(s.body)}</p>
-        ${s.image ? image(s.image, s.title) : ''}</section>`).join('')}
-      ${p.notes ? `<section><h2>Design notes</h2><p>${esc(p.notes)}</p></section>` : ''}
-      ${(p.gallery || []).map((src,i) => image(src, p.title + ' — image ' + (i+1))).join('')}
-    </div><div class="back-bottom">${backLink}</div></article>`;
-
-  document.querySelector('[data-launch]')?.addEventListener('click', event => {
-    const player = event.target.closest('[data-player-url]');
-    const frame = document.createElement('iframe');
-    frame.title = p.title + ' playable build';
-    frame.allow = 'fullscreen; gamepad';
-    frame.sandbox = 'allow-scripts allow-same-origin allow-pointer-lock';
-    frame.src = player.dataset.playerUrl;
-    player.replaceWith(frame);
-  });
-}
-
-function notFound() {
-  main.innerHTML = `<div class="wrap inner-page"><h1>Page not found</h1>${link('#home','Return to profile')}</div>`;
-}
-
-function route() {
-  const [type, id] = (location.hash.slice(1) || 'home').split('/');
-  document.title = 'Toni Guillem — Technical Game Designer';
-  let active = '';
-  let target = main;
-  if (['home','main','about','contact','work','lab'].includes(type) && !id) {
-    home();
-    active = ['work','lab'].includes(type) ? type : 'about';
-    target = document.getElementById(type) || document.getElementById('about');
-  } else if (type === 'lab' && (id === 'all' || Object.hasOwn(categories, id))) {
-    lab(id);
-    active = 'lab';
-  } else if (type === 'project' || type === 'prototype') {
-    const prototype = type === 'prototype';
-    const project = (prototype ? content.prototypes.filter(p => p.published) : content.projects).find(p => p.id === id);
-    if (project) {
-      detail(project, prototype);
-      active = prototype ? 'lab' : 'work';
-    } else notFound();
-  } else notFound();
-
-  for (const item of document.querySelectorAll('.site-header nav a')) {
-    if (item.hash === '#' + active) item.setAttribute('aria-current', 'location');
-    else item.removeAttribute('aria-current');
-  }
-  if (location.hash) {
-    target.tabIndex = -1;
-    target.focus({preventScroll:true});
-    target.scrollIntoView({block:'start'});
-  }
-}
-
-document.querySelector('#year').textContent = new Date().getFullYear();
-fetch('content.json').then(response => {
-  if (!response.ok) throw new Error('Content unavailable');
-  return response.json();
-}).then(data => {
-  content = data;
-  route();
-  window.addEventListener('hashchange', route);
-}).catch(() => {
-  main.innerHTML = '<div class="wrap inner-page"><h1>Portfolio unavailable</h1><p>Refresh the page or <a href="mailto:toni.guillem@gmail.com">email Toni</a>.</p></div>';
-});
+function detail(p,prototype=false){document.title=`${p.title} — Toni Guillem`; const next=content.projects[(content.projects.findIndex(x=>x.id===p.id)+1)%content.projects.length];main.innerHTML=`<div class="wrap"><section class="detail-head"><a class="back" href="${prototype?'#lab/'+p.category:'#work'}">← ${prototype?'BACK TO THE WORKSHOP':'ALL SELECTED WORK'}</a><p class="project-meta">${esc(p.studio||p.category.replace('-',' '))} / ${esc(p.role||'Independent experiment')}</p><h1>${esc(p.title)}</h1><p class="detail-intro">${esc(p.intro||p.summary)}</p></section>${p.image?image(p.image,p.imageAlt||p.title,true).replace('<img','<img class="detail-cover"'):''}${p.facts?.length?`<dl class="facts">${p.facts.map(([k,v])=>`<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl>`:''}<div class="case-body">${media(p)}${(p.sections||[]).map(s=>`<section class="case-section"><h2>${esc(s.title)}</h2><p>${esc(s.body).replace(/\n/g,'<br>')}</p>${s.image?image(s.image,s.title):''}</section>`).join('')}${p.notes?`<section class="case-section"><h2>Design notes</h2><p>${esc(p.notes).replace(/\n/g,'<br>')}</p></section>`:''}${p.gallery?.length?`<div class="gallery">${p.gallery.map((src,i)=>image(src,`${p.title} — project image ${i+1}`)).join('')}</div>`:''}</div>${!prototype?`<a class="next-project" href="#project/${esc(next.id)}"><div><small>NEXT PROJECT</small><h2>${esc(next.title)}</h2></div>${arrow}</a>`:''}</div>${contact()}`;document.querySelector('[data-launch]')?.addEventListener('click',e=>{const container=e.target.closest('[data-player-url]'); const frame=document.createElement('iframe');frame.src=container.dataset.playerUrl;frame.title=`${p.title} playable build`;frame.allow='fullscreen; gamepad';frame.sandbox='allow-scripts allow-same-origin allow-pointer-lock';container.replaceWith(frame);});}
+function route(){const hash=decodeURIComponent(location.hash.slice(1)||'home'); const [type,id]=hash.split('/'); document.querySelector('nav.open')?.classList.remove('open');document.querySelector('.menu-toggle').setAttribute('aria-expanded','false'); document.title='Toni Guillem — Technical Game Designer';if(type==='project'||type==='prototype'){const p=(type==='project'?content.projects:content.prototypes.filter(x=>x.published)).find(x=>x.id===id); if(p)detail(p,type==='prototype');else notFound();window.scrollTo(0,0);main.focus({preventScroll:true});}else if(type==='lab'&&id){if(['all','level-design','game-design'].includes(id))lab(id);else notFound();window.scrollTo(0,0);main.focus({preventScroll:true});}else if(['home','work','lab','about','contact','main'].includes(type)){home();requestAnimationFrame(()=>{if(type==='home')window.scrollTo(0,0);else document.getElementById(type)?.scrollIntoView({behavior:'instant'});});}else{notFound();window.scrollTo(0,0);} document.querySelectorAll('.site-header nav a').forEach(a=>{const current=a.hash==='#'+type;a.toggleAttribute('aria-current',current);if(current)a.setAttribute('aria-current','page');});}
+function notFound(){main.innerHTML=`<div class="wrap not-found"><p class="eyebrow">404 / PAGE NOT FOUND</p><h1>This route isn’t in the build.</h1>${textLink('#home','Return to the portfolio')}</div>`;}
+document.querySelector('.menu-toggle').addEventListener('click',e=>{const open=document.querySelector('.site-header nav').classList.toggle('open');e.currentTarget.setAttribute('aria-expanded',String(open));});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.querySelector('nav.open')?.classList.remove('open');document.querySelector('.menu-toggle').setAttribute('aria-expanded','false');}});
+document.querySelector('#year').textContent=new Date().getFullYear();
+fetch('content.json').then(r=>{if(!r.ok)throw new Error('Content unavailable');return r.json();}).then(data=>{content=data;route();window.addEventListener('hashchange',route);}).catch(()=>{main.innerHTML='<div class="wrap not-found"><h1>The fieldbook couldn’t load.</h1><p>Please refresh the page, or <a href="mailto:toni.guillem@gmail.com">contact Toni by email</a>.</p></div>';});
