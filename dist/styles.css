@@ -38,7 +38,7 @@ nav a[aria-current], nav a:hover { text-decoration: underline; text-decoration-t
 .section-kicker span { color: #feb78f; }
 .cover-type h1 { font-size: clamp(3.1rem, 6.7vw, 5.9rem); line-height: .92; font-weight: 850; letter-spacing: -.055em; text-transform: uppercase; }
 .cover-type h1 span { display: block; }
-.cover-type h1 span:nth-child(2) { color: #ffb489; }
+.cover-type h1 span + span { color: #ffb489; }
 .cover-caption { position: absolute; bottom: .9rem; right: .9rem; padding: .45rem .75rem; color: white; background: #241e2ce8; border-radius: .25rem; font-size: .81rem; text-decoration: none; }
 .cover-caption > span:first-child { display: block; font-weight: 700; }
 .cover-caption:hover { color: #ffd7ba; }
