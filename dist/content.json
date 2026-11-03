@@ -15,8 +15,8 @@
       "studio": "Ubisoft",
       "role": "Game Designer · Balancing Team",
       "category": "professional",
-      "image": "assets/siege.webp",
-      "imageAlt": "The Rainbow Six Siege operator roster",
+      "image": "assets/siege-thumb.webp",
+      "imageAlt": "Four Siege operators under arena lights.",
       "label": "Operator design / Systems / Balance",
       "summary": "Reworked Lion and Tachanka and designed gadgets for Defenders.",
       "intro": "I worked on Operator balance and gadget design with teams in Barcelona and Montréal.",
@@ -66,7 +66,9 @@
           "title": "Balance testing and other systems",
           "body": "I worked with Data Analytics and User Research to evaluate balance changes, gathered feedback through professional-player workshops, and iterated through the Test Server. Earlier contributions included Tactical Realism’s magazine management, team loadout information, weapon previews, and map concept proposals."
         }
-      ]
+      ],
+      "coverImage": "assets/siege.webp",
+      "coverAlt": "The Rainbow Six Siege operator roster"
     },
     {
       "id": "assassins-creed-chronicles",
@@ -74,8 +76,8 @@
       "studio": "Ubisoft / Climax Studios",
       "role": "Quest & Level Designer",
       "category": "professional",
-      "image": "assets/chronicles.webp",
-      "imageAlt": "Assassin’s Creed Chronicles key art",
+      "image": "assets/chronicles-thumb.webp",
+      "imageAlt": "A hooded assassin in red and black against an ink landscape.",
       "label": "Level design / Quest design / UE3",
       "summary": "Designed Challenge Room missions and built their levels in Unreal Engine 3.",
       "intro": "At Ubisoft, I worked with Climax Studios on short, replayable missions set in the Animus.",
@@ -107,7 +109,9 @@
       ],
       "gallery": [
         "assets/challenge-03.webp"
-      ]
+      ],
+      "coverImage": "assets/chronicles.webp",
+      "coverAlt": "Assassin’s Creed Chronicles key art"
     },
     {
       "id": "rabbids-invasion",
@@ -115,8 +119,8 @@
       "studio": "Ubisoft",
       "role": "[Your role]",
       "category": "professional",
-      "image": "assets/rabbids-invasion.webp",
-      "imageAlt": "Rabbids surrounding the show title against blue and yellow rays.",
+      "image": "assets/rabbids-garden.webp",
+      "imageAlt": "Rabbids gathered around a family in a garden.",
       "summary": "[One-sentence summary of your contribution]",
       "intro": "[Project overview]",
       "sections": [
@@ -126,7 +130,9 @@
           "image": "assets/rabbids-garden.webp",
           "imageAlt": "Rabbids gathered around a family in a garden."
         }
-      ]
+      ],
+      "coverImage": "assets/rabbids-invasion.webp",
+      "coverAlt": "Rabbids surrounding the show title against blue and yellow rays."
     },
     {
       "id": "ea-sports",
@@ -134,8 +140,8 @@
       "studio": "EA SPORTS",
       "role": "Game Designer",
       "category": "professional",
-      "image": "assets/madden.webp",
-      "imageAlt": "Madden NFL player artwork",
+      "image": "assets/madden-thumb.webp",
+      "imageAlt": "Tom Brady in his number 12 Buccaneers jersey on the field.",
       "label": "Presentation / Progression / Team building",
       "summary": "Led design on the Stadia version of Madden NFL 21 and worked on player progression for PGA Tour.",
       "intro": "I joined EA Tiburon’s new Madrid division in January 2020 as its first game designer.",
@@ -158,7 +164,9 @@
           "title": "Madden NFL 21 and PGA Tour",
           "body": "I worked with the franchise leads in Orlando on Madden NFL 21 for Stadia, then designed presentation and player-progression features for PGA Tour. I also helped the studio director recruit two designers in Madrid."
         }
-      ]
+      ],
+      "coverImage": "assets/madden.webp",
+      "coverAlt": "Madden NFL player artwork"
     },
     {
       "id": "united-1944",
