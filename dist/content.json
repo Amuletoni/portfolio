@@ -257,12 +257,15 @@
       "studio": "Yellow Brick Games",
       "label": "Latest role",
       "project": "Unannounced project",
-      "role": "Technical Designer",
-      "summary": "Worked with the Gameplay Ability System (GAS) in Unreal Engine 5."
+      "role": "Technical Game Designer",
+      "summary": "Worked with Unreal Engine 5’s Gameplay Ability System (GAS) on a third-person action-adventure game."
     },
     {
       "studio": "Escape Velocity Entertainment",
-      "summary": "Designed gameplay abilities, wrote their technical specifications and implemented them in Unreal Engine 5."
+      "summary": "Designed and implemented gameplay abilities for an online multiplayer third-person shooter using Unreal Engine 5’s Gameplay Ability System.",
+      "label": "Previous role",
+      "role": "Technical Game Designer",
+      "project": "Unannounced project"
     }
   ],
   "studios": [
