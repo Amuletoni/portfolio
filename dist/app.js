@@ -34,13 +34,11 @@ function workshopLink(id, label) {
 
 function home() {
   const p = content.profile;
-  const games = content.projects.filter(project => project.context !== 'academic');
-  const coursework = content.projects.filter(project => project.context === 'academic');
   main.innerHTML = `<div class="wrap">
     <section id="about" aria-label="Profile" class="profile">
       <div class="profile-cover">
         <img class="cover-art" src="assets/velvet-shell.webp" alt="" fetchpriority="high">
-        <div class="cover-type"><p class="section-kicker">Profile <span>/</span> ${esc(p.experience)} years in games</p>
+        <div class="cover-type"><p class="section-kicker">Portfolio <span>/</span> ${esc(p.experience)} years in games</p>
           <h1>${p.title.trim().split(/\s+/).map(word => `<span>${esc(word)}</span>`).join(' ')}</h1></div>
         <a class="cover-caption" href="#project/rainbow-six-siege"><span>Rainbow Six Siege</span>Operation Velvet Shell ${arrow}</a>
       </div>
@@ -57,13 +55,11 @@ function home() {
         <h3>${esc(job.studio)}</h3>
         ${job.role ? `<p class="role">${esc(job.role)} · ${esc(job.project)}</p>` : ''}
         <p>${esc(job.summary)}</p></article>`).join('')}</div>
-      <ul class="games">${games.map(gameRow).join('')}</ul>
+      <ul class="games">${content.projects.map(gameRow).join('')}</ul>
     </section>
     <section id="lab" class="home-section"><h2>The Workshop</h2>
+      <p class="workshop-intro">My spare-time projects in level design and game design.</p>
       <div class="workshop-list">${Object.entries(categories).map(([id, label]) => workshopLink(id, label)).join('')}</div>
-      ${coursework.map(game => `<div class="academic"><span class="meta">Academic project</span>
-        <h3>${link('#project/' + game.id, game.title)}</h3>
-        <p>${esc(game.studio)} · ${esc(game.summary)}</p></div>`).join('')}
     </section>
   </div>`;
 }
@@ -87,9 +83,8 @@ function media(p){let html=''; if(p.video){const u=safeUrl(p.video); if(u) html+
 
 function detail(p, prototype) {
   document.title = `${p.title} — Toni Guillem`;
-  const inWorkshop = prototype || p.context === 'academic';
-  const back = prototype ? '#lab/' + p.category : inWorkshop ? '#lab' : '#work';
-  const backLink = link(back, inWorkshop ? '← The Workshop' : '← Games & Studios');
+  const back = prototype ? '#lab/' + p.category : '#work';
+  const backLink = link(back, prototype ? '← The Workshop' : '← Games & Studios');
   main.innerHTML = `<article class="wrap inner-page">
     ${backLink}
     <header class="detail-head"><div><p class="meta">${esc(p.studio || categories[p.category])}</p>
@@ -137,7 +132,7 @@ function route() {
     const project = (prototype ? content.prototypes.filter(p => p.published) : content.projects).find(p => p.id === id);
     if (project) {
       detail(project, prototype);
-      active = prototype || project.context === 'academic' ? 'lab' : 'work';
+      active = prototype ? 'lab' : 'work';
     } else notFound();
   } else notFound();
 

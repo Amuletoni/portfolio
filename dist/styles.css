@@ -45,9 +45,10 @@ nav a[aria-current], nav a:hover { text-decoration: underline; text-decoration-t
 .cover-caption:hover { color: #ffd7ba; }
 .profile-summary { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding-block: 1.15rem; }
 .profile-summary > p { max-width: 64ch; }
-.studio-logos { display: grid; grid-template-columns: repeat(6,1fr); list-style: none; background: #282531; border-radius: .35rem; padding: .6rem; }
-.studio-logos li { display: grid; place-items: center; min-width: 0; padding: .45rem .8rem; }
-.studio-logos img { width: 100%; max-width: 8rem; height: 2.45rem; object-fit: contain; }
+.studio-logos { display: flex; justify-content: space-evenly; align-items: center; flex-wrap: wrap; gap: 1rem; list-style: none; background: #282531; border-radius: .35rem; padding: 1.25rem; }
+.studio-logos li { display: grid; place-items: center; flex: 1 1 0; min-width: 0; }
+.studio-logos img { width: 100%; max-width: 7rem; height: 2.25rem; object-fit: contain; }
+.studio-logos img[src$="/escape-velocity.webp"], .studio-logos img[src$="/novarama.webp"] { filter: brightness(0) invert(1); }
 .section-kicker, .meta, dt { color: var(--accent); font: 650 .8rem/1.4 ui-monospace, monospace; }
 .section-kicker { margin-bottom: .4rem; }
 h1, h2, h3 { line-height: 1.12; letter-spacing: -.04em; text-wrap: balance; }
@@ -74,6 +75,7 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.55rem); }
 .studio-note h3 { font-size: 1.12rem; margin-bottom: .32rem; }
 .studio-note .role { margin-bottom: .25rem; font-weight: 600; }
 .workshop-list { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.workshop-intro { margin: -.65rem 0 1rem; color: var(--muted); }
 .workshop-link { display: grid; grid-template-columns: 1fr auto auto; gap: .65rem; align-items: center; border-top: 1px solid var(--rule); padding: .9rem 0; text-decoration: none; }
 .workshop-link:hover strong { text-decoration: underline; }
 .workshop-link span { font-size: .875rem; }
@@ -114,7 +116,8 @@ button { font: inherit; cursor: pointer; }
   .cover-type { padding-bottom: 4rem; }
   .cover-art { width: 100%; object-position: 65% center; }
   .profile-cover::before { background: linear-gradient(90deg,#211e2bec,#211e2ba3 58%,#211e2b24); }
-  .studio-logos { grid-template-columns: repeat(3,1fr); row-gap: .3rem; }
+  .studio-logos { justify-content: center; gap: 1.1rem 5%; }
+  .studio-logos li { flex: 0 1 29%; }
   .studio-logos img { height: 2rem; }
   .game-row { grid-template-columns: 4.7rem 1fr 1rem; gap: .3rem .7rem; }
   .game-row img { grid-row: 1; align-self: start; margin-top: .2rem; }
