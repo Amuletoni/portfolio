@@ -68,7 +68,7 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.55rem); }
 .role { font-size: .9rem; }
 .row-arrow { color: var(--accent); font-size: 1.4rem; }
 .academic { padding-top: .9rem; border-top: 1px solid var(--rule); }
-.studio-credits { display: grid; grid-template-columns: repeat(2,1fr); gap: 1rem; margin-bottom: 1.2rem; }
+.studio-credits { display: grid; grid-template-columns: repeat(2,1fr); gap: 1rem; margin-top: 1.2rem; }
 .studio-note { padding: .85rem 1rem; border-left: 3px solid #c99534; background: #f5ecd7; }
 .studio-note:nth-child(2n) { border-color: #ab756a; background: #f2e8e1; }
 .studio-note h3 { font-size: 1.12rem; margin-bottom: .32rem; }

@@ -50,12 +50,12 @@ function home() {
       </ul>
     </section>
     <section id="work" class="home-section"><h2>Games &amp; Studios</h2>
+      <ul class="games">${content.projects.map(gameRow).join('')}</ul>
       <div class="studio-credits">${(content.studioWork || []).map(job => `<article class="studio-note">
         ${job.label ? `<p class="meta">${esc(job.label)}</p>` : ''}
         <h3>${esc(job.studio)}</h3>
         ${job.role ? `<p class="role">${esc(job.role)} · ${esc(job.project)}</p>` : ''}
         <p>${esc(job.summary)}</p></article>`).join('')}</div>
-      <ul class="games">${content.projects.map(gameRow).join('')}</ul>
     </section>
     <section id="lab" class="home-section"><h2>The Workshop</h2>
       <p class="workshop-intro">My spare-time projects in level design and game design.</p>

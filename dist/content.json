@@ -182,6 +182,44 @@
       ]
     },
     {
+      "id": "rabbids-invasion",
+      "title": "Rabbids Invasion: The Interactive TV Show",
+      "studio": "Ubisoft",
+      "role": "[Your role]",
+      "category": "professional",
+      "image": "assets/rabbids-invasion.webp",
+      "imageAlt": "Rabbids surrounding the show title against blue and yellow rays.",
+      "summary": "[One-sentence summary of your contribution]",
+      "intro": "[Project overview]",
+      "sections": [
+        {
+          "title": "[Contribution title]",
+          "body": "[Describe your work on this project.]",
+          "image": "assets/rabbids-garden.webp",
+          "imageAlt": "Rabbids gathered around a family in a garden."
+        }
+      ]
+    },
+    {
+      "id": "scourge-outbreak",
+      "title": "Scourge: Outbreak",
+      "studio": "Tragnarion Studios",
+      "role": "[Your role]",
+      "category": "professional",
+      "image": "assets/scourge-outbreak.webp",
+      "imageAlt": "Scourge: Outbreak squad portraits against a purple background.",
+      "summary": "[One-sentence summary of your contribution]",
+      "intro": "[Project overview]",
+      "sections": [
+        {
+          "title": "[Contribution title]",
+          "body": "[Describe your work on this project.]",
+          "image": "assets/scourge-squad.webp",
+          "imageAlt": "The squad in combat in a dark industrial setting."
+        }
+      ]
+    },
+    {
       "id": "hazel-dazzle",
       "title": "Hazel Dazzle",
       "studio": "Wake Studios",
