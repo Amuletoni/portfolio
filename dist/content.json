@@ -5,60 +5,279 @@
     "experience": "15+",
     "email": "toni.guillem@gmail.com",
     "linkedin": "https://www.linkedin.com/in/toni-guillem/",
-    "intro": "I design the way games play. Then I get in the engine and make it happen.",
-    "bio": "My work sits between game design and implementation. I build gameplay abilities, shape combat systems, and turn design intentions into something a team can test and a player can feel."
+    "intro": "I design combat mechanics, gameplay abilities and levels.",
+    "bio": "I started as a gameplay programmer. At Ubisoft I worked on Operator reworks for Rainbow Six Siege, and at Novarama I led the design of the weapon systems for United 1944."
   },
   "projects": [
     {
-      "id": "rainbow-six-siege", "title": "Rainbow Six Siege", "studio": "Ubisoft", "role": "Game Designer · Balancing Team", "category": "professional", "image": "assets/siege.webp", "imageAlt": "The Rainbow Six Siege operator roster", "label": "Operator design / Systems / Balance", "summary": "Small changes. Whole new ways to play.",
-      "intro": "Designing gadgets, reworking Operators, and balancing an interconnected tactical sandbox. My work on Siege covered new gameplay mechanics, player-facing systems, and the careful adjustment of a live competitive game.",
-      "facts": [["Focus", "Gameplay systems & Operator reworks"], ["Collaboration", "Barcelona ↔ Montréal"], ["Selected releases", "2016–2020"]],
-      "sections": [
-        {"title": "Lion: keeping the identity, changing the information", "image": "assets/lion.webp", "body": "Lion’s original global detection revealed enemy silhouettes and created problems at high levels of play. Our objective was to bring him back into the competitive Operator rotation. We moved his ability onto Siege’s existing Ping System while keeping an accessible, global ability. After monitoring the changes, Lion returned to Pro League in June 2019."},
-        {"title": "Tachanka: a more mobile area-denial role", "image": "assets/tachanka.webp", "body": "The stationary turret limited Tachanka’s usefulness, but his identity mattered. I designed and prototyped a rework around an incendiary grenade launcher, testing the size and duration of its fire zones. We also converted his original LMG into a primary weapon, retaining its low rate of fire. I left Ubisoft after the design and full prototype were approved for production; the rework shipped in 2020."},
-        {"title": "Gadgets with readable strengths and weaknesses", "image": "assets/proximity.webp", "body": "The Proximity Alarm offered Defenders a small, throwable source of audio information. Its placement possibilities created combinations with other gadgets, while its vulnerability to EMP effects, explosions, gunfire, and melee provided counterplay. This feature shipped after my time at Ubisoft."},
-        {"title": "The Bulletproof Camera", "image": "assets/camera.webp", "body": "I owned the design from a workshop concept through development with the Montréal team. The camera could see through smoke and resist frontal gunfire, with weak spots and other vulnerabilities creating counterplay. Its interactions with observation, EMP, smoke, and destruction systems were central to the design."},
-        {"title": "Beyond individual Operators", "body": "I worked with Data Analytics and User Research to evaluate balance changes, gathered feedback through professional-player workshops, and iterated through the Test Server. Earlier contributions included the concussion effect used by Ela and Zofia, Tactical Realism’s magazine management, team loadout information, weapon previews, and map concept proposals."}
-      ]
-    },
-    {
-      "id": "united-1944", "title": "United 1944", "studio": "Novarama", "role": "Principal Game Designer", "category": "professional", "image": "assets/united.webp", "imageAlt": "United 1944 soldiers against orange battlefield artwork", "label": "Shooter feel / Weapons / Design leadership", "summary": "Building the foundations of a shooter.",
-      "intro": "A 16v16 multiplayer FPS combining combat with crafting, building, and tactical play. I led core gameplay design, turning the initial proof of concept into a more complete shooter experience in Unreal Engine 5.",
-      "facts": [["Engine", "Unreal Engine 5"], ["Scope", "Core shooter systems"], ["Role", "Design ownership & team mentoring"]],
-      "sections": [
-        {"title": "The feel of every shot", "body": "I designed the core shooter system from scratch, including recoil, spread, and reload mechanics. This formed the foundation for more than 20 WWII weapons across over eight weapon families, supporting distinct combat roles and playstyles."},
-        {"title": "A wider tactical toolkit", "body": "Alongside the weapons, I conceptualized gadgets and passive abilities ranging from explosives to intelligence tools. The goal was to give players more ways to read an encounter and respond to it."},
-        {"title": "Keeping the team aligned", "body": "I worked with programming, animation, audio, and production to align gameplay with the creative direction. I also mentored a small team of designers, reviewing their work and helping them carry ideas from concept into the game."}
-      ]
-    },
-    {
-      "id": "assassins-creed-chronicles", "title": "Assassin’s Creed Chronicles", "studio": "Ubisoft / Climax Studios", "role": "Quest & Level Designer", "category": "professional", "image": "assets/chronicles.webp", "imageAlt": "Assassin’s Creed Chronicles key art", "label": "Level design / Quest design / UE3", "summary": "Finding more possibility in 2.5 dimensions.",
-      "intro": "Short, replayable missions set inside the Animus. I designed Challenge Room missions and built their layouts in Unreal Engine 3, working with Climax Studios in my first external co-development project at Ubisoft.",
-      "facts": [["Engine", "Unreal Engine 3"], ["Mission types", "Collect / Contract / Assassination"], ["Focus", "2.5D navigation & replayability"]],
-      "sections": [
-        {"title": "A new rhythm for existing mechanics", "image": "assets/challenge-01.webp", "body": "The brief was to create quickly accessible content alongside the main campaign. We developed three Challenge Room types: Collect, Contract, and Assassination. I combined the existing navigation, stealth, combat, and assassination mechanics into short missions with replay potential."},
-        {"title": "The Animus as a design space", "image": "assets/challenge-02.webp", "body": "I took levels from initial layout into Unreal Engine 3. The Animus’s abstract environment let us explore 2.5D navigation more freely than the main campaign’s realistic settings."}
+      "id": "rainbow-six-siege",
+      "title": "Rainbow Six Siege",
+      "studio": "Ubisoft",
+      "role": "Game Designer · Balancing Team",
+      "category": "professional",
+      "image": "assets/siege.webp",
+      "imageAlt": "The Rainbow Six Siege operator roster",
+      "label": "Operator design / Systems / Balance",
+      "summary": "Reworked Lion and Tachanka and designed gadgets for Defenders.",
+      "intro": "I worked on Operator balance and gadget design with teams in Barcelona and Montréal.",
+      "facts": [
+        [
+          "Focus",
+          "Gameplay systems & Operator reworks"
+        ],
+        [
+          "Collaboration",
+          "Barcelona ↔ Montréal"
+        ],
+        [
+          "Selected releases",
+          "2016–2020"
+        ]
       ],
-      "gallery": ["assets/challenge-03.webp"]
+      "sections": [
+        {
+          "title": "Lion’s detection pings",
+          "image": "assets/lion.webp",
+          "body": "Lion’s scan originally revealed enemy silhouettes. We replaced the outlines with location pings so opponents could move after detection without giving away their full path. Lion returned to Pro League in June 2019."
+        },
+        {
+          "title": "Tachanka’s grenade launcher",
+          "image": "assets/tachanka.webp",
+          "body": "I designed and prototyped an incendiary grenade launcher to give Tachanka an area-denial role away from his stationary turret. I tested the radius and duration of the fire zones. We converted his turret LMG into a primary weapon. Ubisoft approved the design and prototype before I left, and the rework shipped in 2020."
+        },
+        {
+          "title": "Proximity Alarm",
+          "image": "assets/proximity.webp",
+          "body": "The Proximity Alarm gives Defenders an audio cue when an attacker comes within range. Players can throw it onto a surface near another gadget. Attackers can disable it with an EMP or destroy it with gunfire, explosives or melee. It shipped after I left Ubisoft."
+        },
+        {
+          "title": "Bulletproof Camera",
+          "image": "assets/camera.webp",
+          "body": "I designed the camera with artists, animators and sound designers in Montréal. Defenders can mount it on floors or walls and see through smoke. Its front plate resists gunfire, but attackers can shoot the weak spot or use explosives or melee."
+        },
+        {
+          "title": "Balance testing and other systems",
+          "body": "I worked with Data Analytics and User Research to evaluate balance changes, gathered feedback through professional-player workshops, and iterated through the Test Server. Earlier contributions included the concussion effect used by Ela and Zofia, Tactical Realism’s magazine management, team loadout information, weapon previews, and map concept proposals."
+        }
+      ]
     },
     {
-      "id": "ea-sports", "title": "Madden NFL 21 & PGA Tour", "studio": "EA SPORTS", "role": "Game Designer", "category": "professional", "image": "assets/madden.webp", "imageAlt": "Madden NFL player artwork", "label": "Presentation / Progression / Team building", "summary": "Connecting creative direction and development.",
-      "intro": "I joined EA SPORTS in January 2020 as the first game designer in a new Madrid division of EA Tiburon, helping translate the Orlando creative team’s vision into development work.",
-      "facts": [["Studio", "EA Madrid / EA Tiburon"], ["Projects", "Madden NFL 21 / PGA Tour"], ["Focus", "Design & creative-team foundations"]],
-      "sections": [{"title": "Across teams and projects", "body": "For the Stadia version of Madden NFL 21, I was the main game designer responsible for carrying through the franchise leadership’s creative vision. I then worked on presentation and player-progression features for PGA Tour. Alongside the Studio Director, I helped build the Madrid creative team, recruiting two designers."}]
+      "id": "united-1944",
+      "title": "United 1944",
+      "studio": "Novarama",
+      "role": "Principal Game Designer",
+      "category": "professional",
+      "image": "assets/united.webp",
+      "imageAlt": "United 1944 soldiers against orange battlefield artwork",
+      "label": "Shooter feel / Weapons / Design leadership",
+      "summary": "Designed recoil, spread and reloading for more than 20 WWII weapons.",
+      "intro": "I led core gameplay design for a 16v16 multiplayer shooter built in Unreal Engine 5. Players craft weapons, build defenses and fight over territory.",
+      "facts": [
+        [
+          "Engine",
+          "Unreal Engine 5"
+        ],
+        [
+          "Scope",
+          "Core shooter systems"
+        ],
+        [
+          "Role",
+          "Design ownership & team mentoring"
+        ]
+      ],
+      "sections": [
+        {
+          "title": "Weapon handling",
+          "body": "I designed recoil, spread and reload mechanics for more than 20 WWII weapons across over eight weapon families."
+        },
+        {
+          "title": "Gadgets and passive abilities",
+          "body": "I designed explosives, intelligence-gathering gadgets and passive abilities to complement the gunplay."
+        },
+        {
+          "title": "Design team",
+          "body": "I reviewed prototypes with programmers, animators and sound designers, planned features with production and mentored a small team of designers."
+        }
+      ]
     },
     {
-      "id": "hazel-dazzle", "title": "Hazel Dazzle", "studio": "Wake Studios", "role": "Main Game Programmer", "category": "professional", "image": "assets/hazel.webp", "imageAlt": "Spherical planetary gameplay from Hazel Dazzle", "label": "Gameplay programming / 3D puzzles", "summary": "Where my design and programming met.",
-      "intro": "Two years leading game programming on an iPad adventure, with a small team and room to contribute directly to its design.",
-      "facts": [["Platform", "iPad"], ["Focus", "Gameplay programming"], ["Interaction", "Touch / Accelerometer / Gyroscope"]],
-      "sections": [{"title": "Two kinds of space", "body": "I engineered gameplay that moved between spherical 3D planetary navigation and isometric 2D dungeon exploration. My work included combo-based combat, character abilities, and an AI companion."}, {"title": "A puzzle in your hands", "body": "I designed a 3D puzzle system using the iPad’s accelerometer and gyroscope. Forced perspective helped make the screen feel like a physical box that players could manipulate in their hands."}]
+      "id": "assassins-creed-chronicles",
+      "title": "Assassin’s Creed Chronicles",
+      "studio": "Ubisoft / Climax Studios",
+      "role": "Quest & Level Designer",
+      "category": "professional",
+      "image": "assets/chronicles.webp",
+      "imageAlt": "Assassin’s Creed Chronicles key art",
+      "label": "Level design / Quest design / UE3",
+      "summary": "Designed Challenge Room missions and built their levels in Unreal Engine 3.",
+      "intro": "At Ubisoft, I worked with Climax Studios on short, replayable missions set in the Animus.",
+      "facts": [
+        [
+          "Engine",
+          "Unreal Engine 3"
+        ],
+        [
+          "Mission types",
+          "Collect / Contract / Assassination"
+        ],
+        [
+          "Focus",
+          "2.5D navigation & replayability"
+        ]
+      ],
+      "sections": [
+        {
+          "title": "Challenge Room missions",
+          "image": "assets/challenge-01.webp",
+          "body": "We built three types of Challenge Room: Collect, Contract and Assassination. I combined navigation, stealth and combat mechanics from the campaign into missions players could finish in a short session and replay."
+        },
+        {
+          "title": "Level layouts",
+          "image": "assets/challenge-02.webp",
+          "body": "I took levels from initial layout into Unreal Engine 3. The Animus’s abstract environment let us explore 2.5D navigation more freely than the main campaign’s realistic settings."
+        }
+      ],
+      "gallery": [
+        "assets/challenge-03.webp"
+      ]
     },
     {
-      "id": "burning-thirst", "title": "Burning Thirst", "studio": "Master’s degree project", "role": "Design & Programming", "category": "professional", "image": "assets/burning-thirst.webp", "imageAlt": "Burning Thirst project artwork", "label": "Combat / Cinematics / Audio", "summary": "The project that started it all.",
-      "intro": "A hack-and-slash game built by five students: three programmers and two artists. It was an early, ambitious project that helped me enter the games industry.",
-      "facts": [["Context", "Master’s degree"], ["Team", "5 people"], ["Focus", "Combat, cinematics & audio"]],
-      "sections": [{"title": "Learning through a complete game", "body": "I designed combat combos, fatalities, and special attacks, drawing on God of War 3 as a reference. I also designed, scripted, and implemented our cinematic system alongside an artist, with a narrative influenced by Grindhouse and Planet Terror, and took care of the game’s audio design."}]
+      "id": "ea-sports",
+      "title": "Madden NFL 21 & PGA Tour",
+      "studio": "EA SPORTS",
+      "role": "Game Designer",
+      "category": "professional",
+      "image": "assets/madden.webp",
+      "imageAlt": "Madden NFL player artwork",
+      "label": "Presentation / Progression / Team building",
+      "summary": "Led design on the Stadia version of Madden NFL 21 and worked on player progression for PGA Tour.",
+      "intro": "I joined EA Tiburon’s new Madrid division in January 2020 as its first game designer.",
+      "facts": [
+        [
+          "Studio",
+          "EA Madrid / EA Tiburon"
+        ],
+        [
+          "Projects",
+          "Madden NFL 21 / PGA Tour"
+        ],
+        [
+          "Team",
+          "Madrid and Orlando"
+        ]
+      ],
+      "sections": [
+        {
+          "title": "Madden NFL 21 and PGA Tour",
+          "body": "I worked with the franchise leads in Orlando on Madden NFL 21 for Stadia, then designed presentation and player-progression features for PGA Tour. I also helped the studio director recruit two designers in Madrid."
+        }
+      ]
+    },
+    {
+      "id": "hazel-dazzle",
+      "title": "Hazel Dazzle",
+      "studio": "Wake Studios",
+      "role": "Main Game Programmer",
+      "category": "professional",
+      "image": "assets/hazel.webp",
+      "imageAlt": "Spherical planetary gameplay from Hazel Dazzle",
+      "label": "Gameplay programming / 3D puzzles",
+      "summary": "Programmed combat, planetary navigation and motion-controlled puzzles for iPad.",
+      "intro": "I spent two years as the main game programmer on this iPad adventure.",
+      "facts": [
+        [
+          "Platform",
+          "iPad"
+        ],
+        [
+          "Focus",
+          "Gameplay programming"
+        ],
+        [
+          "Interaction",
+          "Touch / Accelerometer / Gyroscope"
+        ]
+      ],
+      "sections": [
+        {
+          "title": "Planetary navigation and dungeon combat",
+          "body": "I engineered gameplay that moved between spherical 3D planetary navigation and isometric 2D dungeon exploration. My work included combo-based combat, character abilities, and an AI companion."
+        },
+        {
+          "title": "Motion-controlled puzzles",
+          "body": "I designed a 3D puzzle system using the iPad’s accelerometer and gyroscope. Forced perspective helped make the screen feel like a physical box that players could manipulate in their hands."
+        }
+      ]
+    },
+    {
+      "id": "burning-thirst",
+      "title": "Burning Thirst",
+      "studio": "Master’s degree project",
+      "role": "Design & Programming",
+      "category": "professional",
+      "image": "assets/burning-thirst.webp",
+      "imageAlt": "Burning Thirst project artwork",
+      "label": "Combat / Cinematics / Audio",
+      "summary": "Designed combat combos and special attacks, scripted cinematics and created the audio.",
+      "intro": "Five of us made this hack-and-slash game for our master’s degree. The team included three programmers and two artists.",
+      "facts": [
+        [
+          "Context",
+          "Master’s degree"
+        ],
+        [
+          "Team",
+          "5 people"
+        ],
+        [
+          "Focus",
+          "Combat, cinematics & audio"
+        ]
+      ],
+      "sections": [
+        {
+          "title": "Combat, cinematics and audio",
+          "body": "I designed combat combos, fatalities, and special attacks, drawing on God of War 3 as a reference. I also designed, scripted, and implemented our cinematic system alongside an artist, with a narrative influenced by Grindhouse and Planet Terror, and took care of the game’s audio design."
+        }
+      ],
+      "context": "academic"
     }
   ],
-  "prototypes": []
+  "prototypes": [],
+  "studioWork": [
+    {
+      "studio": "Yellow Brick Games",
+      "label": "Latest role",
+      "project": "Unannounced project",
+      "role": "Technical Designer",
+      "summary": "Worked with the Gameplay Ability System (GAS) in Unreal Engine 5."
+    },
+    {
+      "studio": "Escape Velocity Entertainment",
+      "summary": "Designed gameplay abilities, wrote their technical specifications and implemented them in Unreal Engine 5."
+    }
+  ],
+  "studios": [
+    {
+      "name": "Yellow Brick Games",
+      "logo": "assets/studios/yellow-brick.webp"
+    },
+    {
+      "name": "Escape Velocity Entertainment",
+      "logo": "assets/studios/escape-velocity.webp"
+    },
+    {
+      "name": "Novarama",
+      "logo": "assets/studios/novarama.webp"
+    },
+    {
+      "name": "Electronic Arts",
+      "logo": "assets/studios/ea.svg"
+    },
+    {
+      "name": "Ubisoft",
+      "logo": "assets/studios/ubisoft.webp"
+    }
+  ]
 }
