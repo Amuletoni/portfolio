@@ -46,7 +46,7 @@ function home() {
         <div id="contact" class="contact-links">${link('mailto:' + p.email, p.email)}
         <a href="${safeUrl(p.linkedin)}">LinkedIn ${arrow}</a></div></div>
       <ul class="studio-logos" aria-label="Studios I’ve worked at">
-        ${(content.studios || []).map(s => `<li><img src="${safeUrl(s.logo)}" alt="${esc(s.name)}"></li>`).join('')}
+        ${(content.studios || []).map(s => `<li><a href="${safeUrl(s.url)}"><img src="${safeUrl(s.logo)}" alt="${esc(s.name)}"></a></li>`).join('')}
       </ul>
     </section>
     <section id="work" class="home-section"><h2>Games &amp; Studios</h2>

@@ -317,23 +317,28 @@
   "studios": [
     {
       "name": "Ubisoft",
-      "logo": "assets/studios/ubisoft.webp"
+      "logo": "assets/studios/ubisoft.webp",
+      "url": "https://www.ubisoft.com/"
     },
     {
       "name": "Electronic Arts",
-      "logo": "assets/studios/ea.svg"
+      "logo": "assets/studios/ea-wordmark.webp",
+      "url": "https://www.ea.com/"
     },
     {
       "name": "Yellow Brick Games",
-      "logo": "assets/studios/yellow-brick.webp"
+      "logo": "assets/studios/yellow-brick.webp",
+      "url": "https://yellowbrickgames.ca/"
     },
     {
       "name": "Escape Velocity Entertainment",
-      "logo": "assets/studios/escape-velocity.webp"
+      "logo": "assets/studios/escape-velocity.webp",
+      "url": "https://eve.games/"
     },
     {
       "name": "Novarama",
-      "logo": "assets/studios/novarama.webp"
+      "logo": "assets/studios/novarama.webp",
+      "url": "https://x.com/novarama"
     }
   ]
 }
