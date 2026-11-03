@@ -85,17 +85,18 @@ function detail(p, prototype) {
   document.title = `${p.title} — Toni Guillem`;
   const back = prototype ? '#lab/' + p.category : '#work';
   const backLink = link(back, prototype ? '← The Workshop' : '← Games & Studios');
+  const cover = p.coverImage || p.image;
   main.innerHTML = `<article class="wrap inner-page">
     ${backLink}
     <header class="detail-head"><div><p class="meta">${esc(p.studio || categories[p.category])}</p>
       <h1>${esc(p.title)}</h1><p class="job-title">${esc(p.role || '')}</p>
       <p>${esc(p.intro || p.summary)}</p></div>
-      ${p.image ? image(p.image, p.imageAlt || p.title, true) : ''}</header>
+      ${cover ? image(cover, p.coverAlt || p.imageAlt || p.title, true) : ''}</header>
     ${p.facts?.length ? `<dl class="facts">${p.facts.map(([k,v]) =>
       `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl>` : ''}
     <div class="case-body">${media(p)}
       ${(p.sections || []).map(s => `<section><h2>${esc(s.title)}</h2><p>${esc(s.body)}</p>
-        ${s.image ? image(s.image, s.title) : ''}</section>`).join('')}
+        ${s.image ? image(s.image, s.imageAlt || s.title) : ''}</section>`).join('')}
       ${p.notes ? `<section><h2>Design notes</h2><p>${esc(p.notes)}</p></section>` : ''}
       ${(p.gallery || []).map((src,i) => image(src, p.title + ' — image ' + (i+1))).join('')}
     </div><div class="back-bottom">${backLink}</div></article>`;

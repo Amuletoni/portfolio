@@ -36,14 +36,19 @@
       ],
       "sections": [
         {
+          "title": "Tachanka’s grenade launcher",
+          "body": "I designed and prototyped an incendiary grenade launcher to give Tachanka an area-denial role away from his stationary turret. I tested the radius and duration of the fire zones. We converted his turret LMG into a primary weapon. Ubisoft approved the design and prototype before I left, and the rework shipped in 2020."
+        },
+        {
           "title": "Lion’s detection pings",
           "image": "assets/lion.webp",
           "body": "Lion’s scan originally revealed enemy silhouettes. We replaced the outlines with location pings so opponents could move after detection without giving away their full path. Lion returned to Pro League in June 2019."
         },
         {
-          "title": "Tachanka’s grenade launcher",
-          "image": "assets/tachanka.webp",
-          "body": "I designed and prototyped an incendiary grenade launcher to give Tachanka an area-denial role away from his stationary turret. I tested the radius and duration of the fire zones. We converted his turret LMG into a primary weapon. Ubisoft approved the design and prototype before I left, and the rework shipped in 2020."
+          "title": "Ela and Zofia’s concussion effect",
+          "body": "I designed the concussion effect first used by Ela’s mines and Zofia’s grenades. I worked with a gameplay programmer and a VFX artist on how the blast disrupted movement, shooting and hearing.",
+          "image": "assets/ela-zofia.webp",
+          "imageAlt": "Ela and Zofia walking side by side through smoke."
         },
         {
           "title": "Proximity Alarm",
@@ -57,9 +62,11 @@
         },
         {
           "title": "Balance testing and other systems",
-          "body": "I worked with Data Analytics and User Research to evaluate balance changes, gathered feedback through professional-player workshops, and iterated through the Test Server. Earlier contributions included the concussion effect used by Ela and Zofia, Tactical Realism’s magazine management, team loadout information, weapon previews, and map concept proposals."
+          "body": "I worked with Data Analytics and User Research to evaluate balance changes, gathered feedback through professional-player workshops, and iterated through the Test Server. Earlier contributions included Tactical Realism’s magazine management, team loadout information, weapon previews, and map concept proposals."
         }
-      ]
+      ],
+      "coverImage": "assets/tachanka.webp",
+      "coverAlt": "Tachanka in a steel helmet with a weapon resting on his shoulder."
     },
     {
       "id": "united-1944",
