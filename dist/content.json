@@ -69,46 +69,6 @@
       ]
     },
     {
-      "id": "united-1944",
-      "title": "United 1944",
-      "studio": "Novarama",
-      "role": "Principal Game Designer",
-      "category": "professional",
-      "image": "assets/united.webp",
-      "imageAlt": "United 1944 soldiers against orange battlefield artwork",
-      "label": "Shooter feel / Weapons / Design leadership",
-      "summary": "Designed recoil, spread and reloading for more than 20 WWII weapons.",
-      "intro": "I led core gameplay design for a 16v16 multiplayer shooter built in Unreal Engine 5. Players craft weapons, build defenses and fight over territory.",
-      "facts": [
-        [
-          "Engine",
-          "Unreal Engine 5"
-        ],
-        [
-          "Scope",
-          "Core shooter systems"
-        ],
-        [
-          "Role",
-          "Design ownership & team mentoring"
-        ]
-      ],
-      "sections": [
-        {
-          "title": "Weapon handling",
-          "body": "I designed recoil, spread and reload mechanics for more than 20 WWII weapons across over eight weapon families."
-        },
-        {
-          "title": "Gadgets and passive abilities",
-          "body": "I designed explosives, intelligence-gathering gadgets and passive abilities to complement the gunplay."
-        },
-        {
-          "title": "Design team",
-          "body": "I reviewed prototypes with programmers, animators and sound designers, planned features with production and mentored a small team of designers."
-        }
-      ]
-    },
-    {
       "id": "assassins-creed-chronicles",
       "title": "Assassin’s Creed Chronicles",
       "studio": "Ubisoft / Climax Studios",
@@ -150,6 +110,25 @@
       ]
     },
     {
+      "id": "rabbids-invasion",
+      "title": "Rabbids Invasion: The Interactive TV Show",
+      "studio": "Ubisoft",
+      "role": "[Your role]",
+      "category": "professional",
+      "image": "assets/rabbids-invasion.webp",
+      "imageAlt": "Rabbids surrounding the show title against blue and yellow rays.",
+      "summary": "[One-sentence summary of your contribution]",
+      "intro": "[Project overview]",
+      "sections": [
+        {
+          "title": "[Contribution title]",
+          "body": "[Describe your work on this project.]",
+          "image": "assets/rabbids-garden.webp",
+          "imageAlt": "Rabbids gathered around a family in a garden."
+        }
+      ]
+    },
+    {
       "id": "ea-sports",
       "title": "Madden NFL 21 & PGA Tour",
       "studio": "EA SPORTS",
@@ -182,40 +161,42 @@
       ]
     },
     {
-      "id": "rabbids-invasion",
-      "title": "Rabbids Invasion: The Interactive TV Show",
-      "studio": "Ubisoft",
-      "role": "[Your role]",
+      "id": "united-1944",
+      "title": "United 1944",
+      "studio": "Novarama",
+      "role": "Principal Game Designer",
       "category": "professional",
-      "image": "assets/rabbids-invasion.webp",
-      "imageAlt": "Rabbids surrounding the show title against blue and yellow rays.",
-      "summary": "[One-sentence summary of your contribution]",
-      "intro": "[Project overview]",
+      "image": "assets/united.webp",
+      "imageAlt": "United 1944 soldiers against orange battlefield artwork",
+      "label": "Shooter feel / Weapons / Design leadership",
+      "summary": "Designed recoil, spread and reloading for more than 20 WWII weapons.",
+      "intro": "I led core gameplay design for a 16v16 multiplayer shooter built in Unreal Engine 5. Players craft weapons, build defenses and fight over territory.",
+      "facts": [
+        [
+          "Engine",
+          "Unreal Engine 5"
+        ],
+        [
+          "Scope",
+          "Core shooter systems"
+        ],
+        [
+          "Role",
+          "Design ownership & team mentoring"
+        ]
+      ],
       "sections": [
         {
-          "title": "[Contribution title]",
-          "body": "[Describe your work on this project.]",
-          "image": "assets/rabbids-garden.webp",
-          "imageAlt": "Rabbids gathered around a family in a garden."
-        }
-      ]
-    },
-    {
-      "id": "scourge-outbreak",
-      "title": "Scourge: Outbreak",
-      "studio": "Tragnarion Studios",
-      "role": "[Your role]",
-      "category": "professional",
-      "image": "assets/scourge-outbreak.webp",
-      "imageAlt": "Scourge: Outbreak squad portraits against a purple background.",
-      "summary": "[One-sentence summary of your contribution]",
-      "intro": "[Project overview]",
-      "sections": [
+          "title": "Weapon handling",
+          "body": "I designed recoil, spread and reload mechanics for more than 20 WWII weapons across over eight weapon families."
+        },
         {
-          "title": "[Contribution title]",
-          "body": "[Describe your work on this project.]",
-          "image": "assets/scourge-squad.webp",
-          "imageAlt": "The squad in combat in a dark industrial setting."
+          "title": "Gadgets and passive abilities",
+          "body": "I designed explosives, intelligence-gathering gadgets and passive abilities to complement the gunplay."
+        },
+        {
+          "title": "Design team",
+          "body": "I reviewed prototypes with programmers, animators and sound designers, planned features with production and mentored a small team of designers."
         }
       ]
     },
@@ -252,6 +233,25 @@
         {
           "title": "Motion-controlled puzzles",
           "body": "I designed a 3D puzzle system using the iPad’s accelerometer and gyroscope. Forced perspective helped make the screen feel like a physical box that players could manipulate in their hands."
+        }
+      ]
+    },
+    {
+      "id": "scourge-outbreak",
+      "title": "Scourge: Outbreak",
+      "studio": "Tragnarion Studios",
+      "role": "[Your role]",
+      "category": "professional",
+      "image": "assets/scourge-outbreak.webp",
+      "imageAlt": "Scourge: Outbreak squad portraits against a purple background.",
+      "summary": "[One-sentence summary of your contribution]",
+      "intro": "[Project overview]",
+      "sections": [
+        {
+          "title": "[Contribution title]",
+          "body": "[Describe your work on this project.]",
+          "image": "assets/scourge-squad.webp",
+          "imageAlt": "The squad in combat in a dark industrial setting."
         }
       ]
     },
@@ -308,6 +308,14 @@
   ],
   "studios": [
     {
+      "name": "Ubisoft",
+      "logo": "assets/studios/ubisoft.webp"
+    },
+    {
+      "name": "Electronic Arts",
+      "logo": "assets/studios/ea.svg"
+    },
+    {
       "name": "Yellow Brick Games",
       "logo": "assets/studios/yellow-brick.webp"
     },
@@ -318,14 +326,6 @@
     {
       "name": "Novarama",
       "logo": "assets/studios/novarama.webp"
-    },
-    {
-      "name": "Electronic Arts",
-      "logo": "assets/studios/ea.svg"
-    },
-    {
-      "name": "Ubisoft",
-      "logo": "assets/studios/ubisoft.webp"
     }
   ]
 }
