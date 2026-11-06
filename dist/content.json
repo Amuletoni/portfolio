@@ -5,21 +5,22 @@
     "experience": "15+",
     "email": "toni.guillem@gmail.com",
     "linkedin": "https://www.linkedin.com/in/toni-guillem/",
-    "intro": "I design combat mechanics, gameplay abilities and levels.",
-    "bio": "I started as a gameplay programmer. At Ubisoft I worked on Operator reworks for Rainbow Six Siege, and at Novarama I led the design of the weapon systems for United 1944."
+    "intro": "I am a hands-on Game Designer with more than 15 years of professional experience creating gameplay.",
+    "bio": "My background as a Gameplay Programmer gives me a genuine technical foundation, and my experience includes roles at major companies such as Ubisoft and Electronic Arts."
   },
   "projects": [
     {
       "id": "rainbow-six-siege",
       "title": "Rainbow Six Siege",
       "studio": "Ubisoft",
-      "role": "Game Designer · Balancing Team",
+      "role": "Senior Game Designer",
       "category": "professional",
+      "layout": "dossier",
       "image": "assets/siege-thumb.webp",
-      "imageAlt": "Four Siege operators under arena lights.",
+      "imageAlt": "Four Siege Operators under arena lights.",
       "label": "Operator design / Systems / Balance",
-      "summary": "Reworked Lion and Tachanka and designed gadgets for Defenders.",
-      "intro": "I worked on Operator balance and gadget design with teams in Barcelona and Montréal.",
+      "summary": "Worked on Operator balance and gadget design with teams in Barcelona and Montréal.",
+      "intro": "At Ubisoft, I focused on Tom Clancy’s Rainbow Six Siege, where I designed and balanced core gameplay features, specifically leading the development of new mechanics and Operator reworks.",
       "facts": [
         [
           "Focus",
@@ -30,45 +31,243 @@
           "Barcelona ↔ Montréal"
         ],
         [
-          "Selected releases",
+          "Years covered",
           "2016–2020"
         ]
       ],
       "sections": [
         {
-          "title": "Tachanka’s grenade launcher",
-          "body": "I designed and prototyped an incendiary grenade launcher to give Tachanka an area-denial role away from his stationary turret. I tested the radius and duration of the fire zones. We converted his turret LMG into a primary weapon. Ubisoft approved the design and prototype before I left, and the rework shipped in 2020.",
+          "id": "tachanka-rework",
+          "group": "Operator reworks",
+          "kind": "Operator rework",
+          "year": "2020",
+          "title": "Tachanka rework",
+          "body": [
+            "Almost since R6 Siege’s release, Tachanka has been one of the community’s favorite characters (and a big source of memes). However, it was also well-known that he was underpowered, and almost never used in the competitive scene. The stationary gameplay of the original turret didn’t work well in the Siege META.",
+            "The biggest challenge when facing this rework was to come up with a solution that could improve his performance, while maintaining his strong identity and lore. We intentionally went a bit crazy with the idea of a vintage revolver-type grenade launcher equipped with fire grenades. This new gadget would allow us to keep the original role for the Operator with more dynamic gameplay. During the prototyping phase, we focused on adjusting the incendiary areas and their duration to ensure it was balanced.",
+            "Additionally, we also kept the original LMG from the turret, converting it into a primary weapon that would allow for opening rotations and covering flanks, but preserving its low fire rate to avoid increasing its lethality.",
+            "The full rework was released during Y5 Operation Shadow Legacy. More details are available in the dedicated entry for the [Tachanka Rework](https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/3oicefa3jo02tshojJDi3P).",
+            "This was my last design before leaving R6 Siege. I left Ubisoft after getting the design and the full prototype approved for final production."
+          ],
           "image": "assets/tachanka.webp",
-          "imageAlt": "Tachanka in a steel helmet with a weapon resting on his shoulder."
+          "imageAlt": "Tachanka in a steel helmet, carrying a weapon over each shoulder.",
+          "videos": [
+            {
+              "label": "Tachanka Rework announcement",
+              "url": "https://www.youtube.com/watch?v=ybw1uPGhDDI"
+            }
+          ]
         },
         {
-          "title": "Lion’s detection pings",
+          "id": "lion-rework",
+          "group": "Operator reworks",
+          "kind": "Operator rework",
+          "year": "2019",
+          "title": "Lion rework",
+          "body": [
+            "My first mission as a member of the Balancing Team was to find a solution for Lion, who was the most problematic Operator back then.",
+            "The original Lion ability introduced a new detection system into R6. This mechanic allowed all Attackers to see enemy silhouettes at a global scale. Unfortunately, that system was quite unbalanced, especially at higher-level play, where it was considered a wall-hack. The situation was even worse in the professional competitive scene, and teams agreed on permanently banning him from the Pro League (ESL).",
+            "Bringing Lion back into the competitive Operator rotation was our main objective. We modified his main ability to convert it to the Ping System (the base intel and comms system in R6), while keeping the essence of an easy-to-use Operator with a global ability.",
+            "After some months monitoring the results of our changes, Lion was released from his perma-ban in Pro League in June 2019."
+          ],
           "image": "assets/lion.webp",
-          "body": "Lion’s scan originally revealed enemy silhouettes. We replaced the outlines with location pings so opponents could move after detection without giving away their full path. Lion returned to Pro League in June 2019."
+          "imageAlt": "Lion crouching in a yellow jacket among embers and rain.",
+          "videos": [
+            {
+              "label": "Lion Rework analysis",
+              "url": "https://www.youtube.com/watch?v=09L8E9tFpc4"
+            }
+          ]
         },
         {
+          "id": "proximity-alarm",
+          "group": "Gadgets & gameplay effects",
+          "kind": "Defender gadget",
+          "year": "2020",
           "title": "Proximity Alarm",
+          "body": [
+            "The Proximity Alarm is a standard gadget for Defenders, introduced during Y5 with Operation Steel Wave.",
+            "It is a throwable sticky gadget that works as a passive intel-gathering tool: it triggers a sound alarm when it detects an Attacker within its effective radius, revealing valuable information to the Defenders. Thanks to its small size, it’s easy to hide in creative spots, and it allows for ingenious combinations with other Operators and gadgets. On the other hand, due to its weak casing and its electronic nature, it is a really vulnerable gadget that can be affected by multiple interactions (EMP effect, explosives, shooting mechanics or a direct melee attack).",
+            "The Proximity Alarm was conceived as an alternative to the Barbed Wire, in an initiative to create new generic gadgets for the defending Operators. More details are available in the [Y5S2 Pre-Season Designer’s Notes](https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/5uO2YSAhA1TzWclMco3A13/y5s2-preseason-designers-notes).",
+            "Like the Tachanka rework, this feature was also released after I left Ubisoft, even though it was developed some time ago and kept on hold, waiting for the right time for its release into the META of the game without compromising other gadgets."
+          ],
           "image": "assets/proximity.webp",
-          "body": "The Proximity Alarm gives Defenders an audio cue when an attacker comes within range. Players can throw it onto a surface near another gadget. Attackers can disable it with an EMP or destroy it with gunfire, explosives or melee. It shipped after I left Ubisoft."
+          "imageAlt": "Two Proximity Alarm gadgets resting on a dark surface.",
+          "videos": [
+            {
+              "label": "Proximity Alarm announcement",
+              "url": "https://youtu.be/vpKW837PRlw?t=296"
+            },
+            {
+              "label": "Proximity Alarm Mythbusters",
+              "url": "https://www.youtube.com/watch?v=gRaBXkyEEaA"
+            }
+          ]
         },
         {
+          "id": "bulletproof-camera",
+          "group": "Gadgets & gameplay effects",
+          "kind": "Defender gadget",
+          "year": "2018",
           "title": "Bulletproof Camera",
+          "body": [
+            "The Bulletproof Camera is a standard gadget for Defenders, introduced during Y3 in Operation Para Bellum.",
+            "It is a member of the Observation Tools System and it can be deployed on floors and walls to maintain surveillance on areas. Players using it can see through thick smoke, and it resists direct shots to its front plate; however, it is vulnerable to explosions, melee attacks and shots to its weak spot.",
+            "The Bulletproof Camera interacts with a huge variety of systems in R6 (intel-gathering, EMP effect, smoke grenades, shooting mechanics, destruction, etc.), allowing for deep interactions and lots of creative gameplay. It quickly became a key gadget for competitive play.",
+            "The conception of this gadget started during a Design Workshop conducted by the Game Director and the Lead Game Designer of R6, where we were asked to extend the standard gadget offering in the game. I was in charge of its design from then on, working remotely from Barcelona with concept artists, sound designers and animators who were located in the lead studio in Montréal. After its release, and as part of our responsibilities as the Balancing Team, we kept maintaining it across the live seasons.",
+            "More details are available in the dedicated [Dev Blog entry](https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/6KlY4IEhecnajBCIzPc89l/dev-blog-observation-tool-changes-and-bulletproof-camera)."
+          ],
           "image": "assets/camera.webp",
-          "body": "I designed the camera with artists, animators and sound designers in Montréal. Defenders can mount it on floors or walls and see through smoke. Its front plate resists gunfire, but attackers can shoot the weak spot or use explosives or melee."
+          "imageAlt": "The Bulletproof Camera gadget, a boxy metal device with a glass lens.",
+          "videos": [
+            {
+              "label": "Bulletproof Camera in depth gameplay",
+              "url": "https://www.youtube.com/watch?v=WAy6ECTWGGc"
+            },
+            {
+              "label": "Bulletproof Camera Mythbusters",
+              "url": "https://www.youtube.com/watch?v=CNXPT_PMD30"
+            }
+          ]
         },
         {
-          "title": "Ela and Zofia’s concussion effect",
-          "body": "I designed the concussion effect first used by Ela’s mines and Zofia’s grenades. I worked with a gameplay programmer and a VFX artist on how the blast disrupted movement, shooting and hearing.",
+          "id": "concussion-effect",
+          "group": "Gadgets & gameplay effects",
+          "kind": "Gameplay effect",
+          "year": "2017",
+          "title": "Concussion effect",
+          "body": [
+            "During 2017, I worked on the design of a new gameplay effect for the crowd control systems.",
+            "As a first step in the conception, and following our own methodology for R6 game design, we established that there was room in the game for more crowd control gadgets. These kinds of gadgets introduce new variations of gameplay that help us keep the META evolving.",
+            "Working closely with a gameplay programmer and a VFX artist, we developed the core of the gameplay effect. Starting with an explosion, the concussion effect affects targets in range, inflicting a dizziness reflex that diminishes certain interactions, like moving and shooting, together with a temporary hearing impairment.",
+            "Eventually, this gameplay effect became the main ingredient for the primary gadgets of two new Operators in Y2: the Concussion Mines for Ela and the Concussion Grenades for Zofia."
+          ],
           "image": "assets/ela-zofia.webp",
           "imageAlt": "Ela and Zofia walking side by side through smoke."
         },
         {
-          "title": "Balance testing and other systems",
-          "body": "I worked with Data Analytics and User Research to evaluate balance changes, gathered feedback through professional-player workshops, and iterated through the Test Server. Earlier contributions included Tactical Realism’s magazine management, team loadout information, weapon previews, and map concept proposals."
+          "id": "balancing-team",
+          "group": "Game balance",
+          "kind": "Team role",
+          "year": "2018–2019",
+          "title": "Balancing Team",
+          "body": [
+            "In December 2018, I started working as a key member of the Balancing Team for R6 Siege, with the objective of constantly improving the game experience, as well as ensuring the overall game balance and an evolving META."
+          ],
+          "steps": [
+            "In close collaboration with the Data Analytics and the User Research teams, we utilized data and player feedback to make the best-informed decisions on adjustments.",
+            "During the development of our balancing changes, we also conducted dedicated workshops with professional R6 players in order to anticipate potential problems. With these, the Balancing Team got first-hand, experienced opinions about the impact of proposed changes in the competitive scene and higher-level play.",
+            "Additionally, the Balancing Team pushed changes into the dedicated Test Server to monitor the data and gather feedback. This helped in tweaking and finalizing the content before finally releasing it into the live game.",
+            "We were always very transparent with the R6 community about the proposed balancing changes, sharing information about work in development on a regular basis through the Designer’s Notes."
+          ],
+          "tagsLabel": "I was involved in the balancing changes detailed in the following Designer’s Notes (click to check them out).",
+          "tags": [
+            {
+              "label": "Y3S4.2",
+              "url": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/7GK0ePzv3TayaxQKAgDGh2/y3s42-designers-notes-midseason"
+            },
+            {
+              "label": "Y4S1.0",
+              "url": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/41rthb1fwpEQUmYL0wDiSq/y4s1-designers-notes-preseason"
+            },
+            {
+              "label": "Y4S1.3",
+              "url": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/2cjUMC0cRyQTI0Huqt35xH/y4s13-designers-notes"
+            },
+            {
+              "label": "Y4S2.0",
+              "url": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/5BlCXKtlBQJbjp0yKKsDTP/y4s2-designers-notes-pre-season"
+            },
+            {
+              "label": "Y4S2.3",
+              "url": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/WZawc3FpXwyS7teWRDpQV/y4s23-designers-notes"
+            },
+            {
+              "label": "Y4S3.0",
+              "url": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/2kDV7ML3jnzN21IqIK96rQ/preseason-designers-notes-y4s3"
+            },
+            {
+              "label": "Y4S3.3",
+              "url": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/5jQIAyI0htWWCLXKimJyjt/y4s33-designers-notes-midseason"
+            },
+            {
+              "label": "Y4S4",
+              "url": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/74VDvRf4hv2FJtJdnh8G76/preseason-designers-notes-y4s4"
+            }
+          ]
+        },
+        {
+          "id": "tactical-realism",
+          "group": "Year 1, Season 3",
+          "kind": "Game mode",
+          "year": "2016",
+          "size": "compact",
+          "title": "Tactical Realism",
+          "body": [
+            "We introduced a new game mode for custom matches in R6 Siege.",
+            "It is considered the hardcore version of game modes.",
+            "I was in charge of redesigning the UX and UI, with the objective of preserving the original essence of old R6 games, making players rely on communications and teamwork instead of the HUD.",
+            "I introduced a redesigned reloading system which relies on realistic magazine management (each magazine is independent)."
+          ]
+        },
+        {
+          "id": "team-loadout-information",
+          "group": "Year 1, Season 3",
+          "kind": "System",
+          "year": "2016",
+          "size": "compact",
+          "title": "Team Loadout Information",
+          "body": [
+            "New system that allows players to check their teammates’ loadouts during the Planning Phase (waiting screen before the round starts).",
+            "With this player comfort change, players can now adjust their loadout depending on what the team is planning to carry into the round.",
+            "I worked closely with the Presentation Director of R6 to design and polish this feature."
+          ]
+        },
+        {
+          "id": "fullscreen-weapon-preview",
+          "group": "Year 1, Season 3",
+          "kind": "Feature",
+          "year": "2016",
+          "size": "compact",
+          "title": "Fullscreen Weapon Preview",
+          "body": [
+            "Together with the Presentation Director of R6, we designed a key feature for our monetization strategy on weapon cosmetics, which allows users to rotate and zoom in on weapons, as well as attach skins and charms.",
+            "We added the “centered control” feature, which allows users to focus on a specific point and pan the camera around that point.",
+            "Players can also use the “Points of Interest” to immediately zoom in to the appropriate part of the weapon."
+          ]
+        },
+        {
+          "id": "new-maps-conception",
+          "group": "Year 1 backlog",
+          "kind": "Maps",
+          "year": "2016",
+          "size": "compact",
+          "title": "New maps conception",
+          "body": [
+            "I worked on the concept and proposals for some of R6’s maps."
+          ],
+          "tags": [
+            "Coastline",
+            "Theme Park",
+            "Villa"
+          ]
+        },
+        {
+          "id": "new-game-modes",
+          "group": "Year 1 backlog",
+          "kind": "Unreleased",
+          "year": "2016",
+          "size": "compact",
+          "title": "New game modes",
+          "body": [
+            "During the first year, I worked on the design of two new game modes for R6 Siege.",
+            "However, the vision and direction of R6 Siege were redefined during Y1, thanks to the striking growth of the eSports scene. Thus, the focus was put on the existing Plant Bomb game mode due to its competitive nature (the only mode available for Ranked games).",
+            "The details of both game modes remain undisclosed. Their current status is “on hold”, potentially becoming live events for upcoming seasons."
+          ]
         }
       ],
       "coverImage": "assets/siege.webp",
-      "coverAlt": "The Rainbow Six Siege operator roster"
+      "coverAlt": "The Rainbow Six Siege Operator roster"
     },
     {
       "id": "assassins-creed-chronicles",
@@ -80,7 +279,7 @@
       "imageAlt": "A hooded assassin in red and black against an ink landscape.",
       "label": "Level design / Quest design / UE3",
       "summary": "Designed Challenge Room missions and built their levels in Unreal Engine 3.",
-      "intro": "At Ubisoft, I worked with Climax Studios on short, replayable missions set in the Animus.",
+      "intro": "AC Chronicles is a 2.5D platformer based on Ubisoft’s franchise Assassin’s Creed. It is my first CoDev experience with an external partner, Climax Studios (located in Portsmouth, UK), and also my first project as a designer at Ubisoft.",
       "facts": [
         [
           "Engine",
@@ -97,14 +296,33 @@
       ],
       "sections": [
         {
-          "title": "Challenge Room missions",
+          "title": "Quest design",
           "image": "assets/challenge-01.webp",
-          "body": "We built three types of Challenge Room: Collect, Contract and Assassination. I combined navigation, stealth and combat mechanics from the campaign into missions players could finish in a short session and replay."
+          "imageAlt": "An assassin climbing a blocky, crystalline Animus structure with orange tiles.",
+          "body": [
+            "Our mandate was to provide additional content to the main campaign, in the form of short missions that could be accessed quickly. We designed 3 different types of Challenge Rooms: Collect, Contract and Assassination, all taking place in the Animus.",
+            "I worked on the mission design of the Challenge Rooms, focused on creating accessible and appealing content for all players. Our goal was to allow for short game sessions with replayable potential.",
+            "When designing the new challenges, we needed to reuse the already existing mechanics from the main campaign, provided by Climax Studios. Following the Rational Game Design methodology, I developed interesting gameplay for the missions, combining navigation, stealth, combat and assassination mechanics."
+          ]
         },
         {
-          "title": "Level layouts",
+          "title": "Level design",
           "image": "assets/challenge-02.webp",
-          "body": "I took levels from initial layout into Unreal Engine 3. The Animus’s abstract environment let us explore 2.5D navigation more freely than the main campaign’s realistic settings."
+          "imageAlt": "An assassin hanging from a rope beside tall gray blocks in the Animus.",
+          "body": [
+            "I also worked on the level design of the missions, doing the layouts and then building the levels using Unreal Engine 3.",
+            "Designing new levels for the Animus was particularly motivating and challenging, as we had room to explore the limits of 2.5D navigation thanks to the abstract nature of the Animus, in contrast with the more realistic feeling of the main campaign levels."
+          ],
+          "videos": [
+            {
+              "label": "Challenge Rooms Walkthrough 1",
+              "url": "https://www.youtube.com/watch?v=pZXaxccDmig"
+            },
+            {
+              "label": "Challenge Rooms Walkthrough 2",
+              "url": "https://www.youtube.com/watch?v=pJFDhyHHyFc"
+            }
+          ]
         }
       ],
       "gallery": [
@@ -117,7 +335,7 @@
       "id": "rabbids-invasion",
       "title": "Rabbids Invasion: The Interactive TV Show",
       "studio": "Ubisoft",
-      "role": "[Your role]",
+      "role": "Gameplay Programmer",
       "category": "professional",
       "image": "assets/rabbids-garden.webp",
       "imageAlt": "Rabbids gathered around a family in a garden.",
@@ -143,8 +361,8 @@
       "image": "assets/madden-thumb.webp",
       "imageAlt": "Tom Brady in his number 12 Buccaneers jersey on the field.",
       "label": "Presentation / Progression / Team building",
-      "summary": "Led design on the Stadia version of Madden NFL 21 and worked on player progression for PGA Tour.",
-      "intro": "I joined EA Tiburon’s new Madrid division in January 2020 as its first game designer.",
+      "summary": "Served as main game designer on the Stadia version of Madden NFL 21, then worked on presentation and player progression for PGA Tour.",
+      "intro": "I joined EA SPORTS in January 2020. More specifically, I became the first game designer for a new EA Tiburon (Orlando) division based in Madrid.",
       "facts": [
         [
           "Studio",
@@ -161,8 +379,16 @@
       ],
       "sections": [
         {
+          "title": "Driving the vision and building the team",
+          "body": [
+            "My main responsibility was to drive the vision provided by the creative leads from EA Tiburon to the development team in Madrid. Working closely with the Studio Director, I was also in charge of building the foundations for the creative team at EA Madrid, recruiting 2 new designers during my time at the studio."
+          ]
+        },
+        {
           "title": "Madden NFL 21 and PGA Tour",
-          "body": "I worked with the franchise leads in Orlando on Madden NFL 21 for Stadia, then designed presentation and player-progression features for PGA Tour. I also helped the studio director recruit two designers in Madrid."
+          "body": [
+            "Regarding specific projects, I contributed to developing the Stadia version of Madden NFL 21, where I was the main game designer and responsible for bringing to fruition the creative vision from the Madden franchise leadership. Right after that project, I worked on key presentation and player progression features for the golf game, PGA Tour."
+          ]
         }
       ],
       "coverImage": "assets/madden.webp",
@@ -172,13 +398,14 @@
       "id": "united-1944",
       "title": "United 1944",
       "studio": "Novarama",
-      "role": "Principal Game Designer",
+      "role": "Lead Game Designer",
       "category": "professional",
+      "layout": "pillars",
       "image": "assets/united.webp",
       "imageAlt": "United 1944 soldiers against orange battlefield artwork",
       "label": "Shooter feel / Weapons / Design leadership",
-      "summary": "Designed recoil, spread and reloading for more than 20 WWII weapons.",
-      "intro": "I led core gameplay design for a 16v16 multiplayer shooter built in Unreal Engine 5. Players craft weapons, build defenses and fight over territory.",
+      "summary": "Led gameplay design on a 16v16 multiplayer shooter, from its core shooter system to more than 20 WWII weapons.",
+      "intro": "I led major gameplay design for the multiplayer FPS United 1944 at Novarama.",
       "facts": [
         [
           "Engine",
@@ -195,16 +422,29 @@
       ],
       "sections": [
         {
-          "title": "Weapon handling",
-          "body": "I designed recoil, spread and reload mechanics for more than 20 WWII weapons across over eight weapon families."
+          "title": "My role",
+          "body": [
+            "As a Lead Game Designer at Novarama, my role involved directing the overall game design process and aligning with the creative direction. This is exemplified in [United 1944](https://store.steampowered.com/app/2152790/UNITED_1944/), a 16v16 multiplayer first-person shooter featuring crafting, building, and strategic gameplay. For this project, I mainly focused on revamping the game’s core shooter experience from its initial proof-of-concept origins into robust and engaging 3Cs, all developed with Unreal Engine 5.",
+            "My responsibilities also extended to mentoring and managing a small team of emerging Game Designers. I guided them in aligning their work with the broader vision of United 1944, guaranteeing both the quality and coherence of the game’s design from concept to execution."
+          ]
         },
         {
-          "title": "Gadgets and passive abilities",
-          "body": "I designed explosives, intelligence-gathering gadgets and passive abilities to complement the gunplay."
+          "title": "Shooter mechanics & weapons system",
+          "body": [
+            "When I joined Novarama, I designed from scratch the core shooter system for United 1944, including mechanics such as recoil, spread, reloads, etc. This became the foundation for a robust weapons system with over 8 gun families and more than 20 unique WWII weapons, covering a variety of playstyles and enriching the combat experience."
+          ]
         },
         {
-          "title": "Design team",
-          "body": "I reviewed prototypes with programmers, animators and sound designers, planned features with production and mentored a small team of designers."
+          "title": "Gameplay design",
+          "body": [
+            "Conceptualized a range of multiple gadgets and passive abilities, from explosives to intel tools. This diverse toolkit added significant tactical depth to player interactions, enabling innovative strategies and gameplay dynamics."
+          ]
+        },
+        {
+          "title": "Leading & mentoring",
+          "body": [
+            "At Novarama, I aligned the game design with the creative vision, ensuring United 1944’s coherence. I fostered proactive communication among various departments such as programming, animation, and sound teams. Additionally, I mentored other game designers, guiding their professional growth and project integration."
+          ]
         }
       ]
     },
@@ -218,7 +458,7 @@
       "imageAlt": "Spherical planetary gameplay from Hazel Dazzle",
       "label": "Gameplay programming / 3D puzzles",
       "summary": "Programmed combat, planetary navigation and motion-controlled puzzles for iPad.",
-      "intro": "I spent two years as the main game programmer on this iPad adventure.",
+      "intro": "As the main Game Programmer at Wake Studios for two years, I led the development of Hazel Dazzle, an ambitious iPad adventure.",
       "facts": [
         [
           "Platform",
@@ -235,12 +475,34 @@
       ],
       "sections": [
         {
-          "title": "Planetary navigation and dungeon combat",
-          "body": "I engineered gameplay that moved between spherical 3D planetary navigation and isometric 2D dungeon exploration. My work included combo-based combat, character abilities, and an AI companion."
+          "title": "Gameplay systems",
+          "body": [
+            "Working in a small team allowed me to significantly influence game design, particularly in engineering gameplay systems that transitioned smoothly between spherical 3D planetary navigation and isometric 2D dungeon exploration.",
+            "I implemented a wide range of features including combo-based combat, character abilities, and an AI companion system."
+          ]
         },
         {
-          "title": "Motion-controlled puzzles",
-          "body": "I designed a 3D puzzle system using the iPad’s accelerometer and gyroscope. Forced perspective helped make the screen feel like a physical box that players could manipulate in their hands."
+          "title": "3D puzzle system",
+          "body": [
+            "A standout achievement was designing a unique 3D puzzle system utilizing the iPad’s accelerometer and gyroscope, which used forced perspective to emulate a physical 3D box in the player’s hands."
+          ]
+        },
+        {
+          "title": "Videos",
+          "videos": [
+            {
+              "label": "3D Puzzle prototype",
+              "url": "https://www.youtube.com/watch?v=KeK_yjG4MSA&t=10s"
+            },
+            {
+              "label": "Trailer",
+              "url": "https://www.youtube.com/watch?v=LYFyOguRyM4"
+            },
+            {
+              "label": "Gameplay",
+              "url": "https://www.youtube.com/watch?v=x6VnqB5FZmA"
+            }
+          ]
         }
       ]
     },
@@ -273,7 +535,7 @@
       "imageAlt": "Burning Thirst project artwork",
       "label": "Combat / Cinematics / Audio",
       "summary": "Designed combat combos and special attacks, scripted cinematics and created the audio.",
-      "intro": "Five of us made this hack-and-slash game for our master’s degree. The team included three programmers and two artists.",
+      "intro": "Burning Thirst is my video games master’s degree project, which we developed with a team of 5 members (3 programmers and 2 artists). Heavily influenced by hack-and-slash games, we took God of War 3 as a main reference to design our project.",
       "facts": [
         [
           "Context",
@@ -290,14 +552,84 @@
       ],
       "sections": [
         {
-          "title": "Combat, cinematics and audio",
-          "body": "I designed combat combos, fatalities, and special attacks, drawing on God of War 3 as a reference. I also designed, scripted, and implemented our cinematic system alongside an artist, with a narrative influenced by Grindhouse and Planet Terror, and took care of the game’s audio design."
+          "title": "Combat design",
+          "body": [
+            "As it was a master’s degree project, all team members took part in the overall vision and global design of the game. I personally worked on the design of the combat system, creating a considerable number of combos, fatalities and special attacks."
+          ]
+        },
+        {
+          "title": "Narrative and cinematics",
+          "body": [
+            "I also worked side by side with one artist on our casual narrative, strongly inspired by the Grindhouse – Planet Terror movie by Robert Rodriguez. Thus, I designed, scripted and implemented our cinematic system."
+          ]
+        },
+        {
+          "title": "Audio design",
+          "body": [
+            "Finally, I personally took care of all the audio design of the game."
+          ]
+        },
+        {
+          "title": "Looking back",
+          "body": [
+            "Despite its obvious flaws due to our inexperience and the very limited resources, I’m very proud of what we achieved. Thanks to this project, I could start working in the video game industry."
+          ]
+        },
+        {
+          "title": "Videos",
+          "videos": [
+            {
+              "label": "Burning Thirst Walkthrough 1",
+              "url": "https://www.youtube.com/watch?v=mKDxxp94MRg"
+            },
+            {
+              "label": "Burning Thirst Walkthrough 2",
+              "url": "https://www.youtube.com/watch?v=TygOjaV-Ba4"
+            }
+          ]
         }
       ],
       "context": "academic"
     }
   ],
   "prototypes": [],
+  "workshop": {
+    "intro": "My spare-time projects in level design and game design.",
+    "badge": "Coming soon",
+    "banner": "Work in progress",
+    "all": {
+      "title": "Experiments are coming soon",
+      "message": "Level design and game design experiments are in the works. Nothing is ready to show yet, so check back soon."
+    },
+    "categories": {
+      "level-design": {
+        "blurb": "Blockouts, layouts and playable spaces",
+        "title": "Level design experiments are coming soon",
+        "message": "This is where I will share blockouts, layouts and playable spaces, along with notes on how each one guides, paces and challenges the player. Nothing is ready to show yet, so check back soon.",
+        "related": [
+          {
+            "label": "See my level design work on Assassin’s Creed Chronicles",
+            "href": "#project/assassins-creed-chronicles"
+          }
+        ]
+      },
+      "game-design": {
+        "blurb": "Mechanics, abilities and systems",
+        "title": "Game design experiments are coming soon",
+        "message": "This is where I will share small prototypes of mechanics, abilities and systems, with design notes on how they work and what I learned. Nothing is ready to show yet, so check back soon.",
+        "related": [
+          {
+            "label": "See my gameplay design work on Rainbow Six Siege",
+            "href": "#project/rainbow-six-siege"
+          },
+          {
+            "label": "See my shooter design work on United 1944",
+            "href": "#project/united-1944"
+          }
+        ]
+      }
+    }
+  },
   "studioWork": [
     {
       "studio": "Yellow Brick Games",
@@ -308,10 +640,10 @@
     },
     {
       "studio": "Escape Velocity Entertainment",
-      "summary": "Designed and implemented gameplay abilities for an online multiplayer third-person shooter using Unreal Engine 5’s Gameplay Ability System.",
       "label": "Previous role",
+      "project": "Unannounced project",
       "role": "Technical Game Designer",
-      "project": "Unannounced project"
+      "summary": "Owned the design of gameplay abilities for an online multiplayer third-person shooter, from concept and technical documentation to full implementation in Unreal Engine 5 with the Gameplay Ability System, collaborating directly with other departments to ensure high-quality execution."
     }
   ],
   "studios": [
