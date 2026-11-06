@@ -339,12 +339,12 @@
       "category": "professional",
       "image": "assets/rabbids-garden.webp",
       "imageAlt": "Rabbids gathered around a family in a garden.",
-      "summary": "[One-sentence summary of your contribution]",
+      "summary": "[WIP: One-sentence summary of my contribution]",
       "intro": "[Project overview]",
       "sections": [
         {
           "title": "[Contribution title]",
-          "body": "[Describe your work on this project.]",
+          "body": "[WIP: Describe my work on this project.]",
           "image": "assets/rabbids-garden.webp",
           "imageAlt": "Rabbids gathered around a family in a garden."
         }
@@ -510,16 +510,16 @@
       "id": "scourge-outbreak",
       "title": "Scourge: Outbreak",
       "studio": "Tragnarion Studios",
-      "role": "[Your role]",
+      "role": "[Gameplay Programmer]",
       "category": "professional",
       "image": "assets/scourge-outbreak.webp",
       "imageAlt": "Scourge: Outbreak squad portraits against a purple background.",
-      "summary": "[One-sentence summary of your contribution]",
+      "summary": "[WIP: One-sentence summary of my contribution]",
       "intro": "[Project overview]",
       "sections": [
         {
           "title": "[Contribution title]",
-          "body": "[Describe your work on this project.]",
+          "body": "[WIP: Describe my work on this project.]",
           "image": "assets/scourge-squad.webp",
           "imageAlt": "The squad in combat in a dark industrial setting."
         }
